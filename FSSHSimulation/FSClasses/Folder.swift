@@ -24,12 +24,4 @@ class Folder: AbstractFile {
             file.list(withPath: withPath)
         }
     }
-    
-    func add(files: AbstractFile...) {
-        self.files.append(contentsOf: files)
-    }
-    
-    func remove(file: AbstractFile) {
-        files.removeAll(where: { $0 === file })
-    }
 }

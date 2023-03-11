@@ -2,7 +2,7 @@
 //  RootFolder.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 11.03.2023.
+//  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
 class RootFolder: Folder {

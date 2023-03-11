@@ -21,7 +21,7 @@ class AbstractFile {
         
         while node != nil {
             nodes.append(node!)
-            node = parent
+            node = node?.parent
         }
         
         return nodes.reversed()
