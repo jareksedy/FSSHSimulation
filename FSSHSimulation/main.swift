@@ -5,17 +5,18 @@
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-let directory3 = Directory(name: "Homework")
-let directory2 = Directory(name: "Desktop")
-let directory1 = Directory(name: "Downloads")
-let directory4 = Directory(name: "Documents")
 let rootDirectory = RootDirectory()
+var isRunning = true
 
-rootDirectory.add(files: [directory2, directory4, directory1])
-directory2.add(file: directory3)
-rootDirectory.list()
-
-print()
-
-directory2.remove(file: directory3)
-rootDirectory.list()
+while isRunning {
+    print(Globals.prompt, terminator: Globals.whitespace)
+    if let input = readLine()?.trimmingCharacters(in: .whitespaces).condenseWhitespace(),
+       let command = input.split(separator: " ").first {
+        switch command.lowercased() {
+        case "exit":
+            isRunning = false
+        default:
+            print("\(Strings.notFound) \(command)")
+        }
+    }
+}
