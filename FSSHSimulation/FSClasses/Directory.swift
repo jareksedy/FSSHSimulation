@@ -26,4 +26,15 @@ class Directory: AbstractFile {
             file.parent = self
         }
     }
+    
+    func remove(file: AbstractFile) {
+        remove(files: [file])
+    }
+    
+    func remove(files: [AbstractFile]) {
+        files.forEach { file in
+            self.files.removeAll(where: { $0 === file })
+            file.parent = nil
+        }
+    }
 }

@@ -13,4 +13,9 @@ let rootDirectory = RootDirectory()
 
 rootDirectory.add(files: [directory2, directory4, directory1])
 directory2.add(file: directory3)
-rootDirectory.list(withPath: true)
+rootDirectory.list()
+
+print()
+
+directory2.remove(file: directory3)
+rootDirectory.list()
