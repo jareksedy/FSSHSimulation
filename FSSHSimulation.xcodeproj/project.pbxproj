@@ -11,6 +11,7 @@
 		CAE9A39229BC3E8F00FBAAF8 /* AbstractFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39129BC3E8F00FBAAF8 /* AbstractFile.swift */; };
 		CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39429BC466900FBAAF8 /* Directory.swift */; };
 		CAE9A39729BC48F900FBAAF8 /* RootDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39629BC48F900FBAAF8 /* RootDirectory.swift */; };
+		CAE9A39929BC5C8100FBAAF8 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39829BC5C8100FBAAF8 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		CAE9A39129BC3E8F00FBAAF8 /* AbstractFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFile.swift; sourceTree = "<group>"; };
 		CAE9A39429BC466900FBAAF8 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		CAE9A39629BC48F900FBAAF8 /* RootDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDirectory.swift; sourceTree = "<group>"; };
+		CAE9A39829BC5C8100FBAAF8 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		CAA88A4729BC3CA4002FC112 /* FSSHSimulation */ = {
 			isa = PBXGroup;
 			children = (
+				CAE9A39A29BC5CD000FBAAF8 /* Globals */,
 				CAE9A39329BC3E9400FBAAF8 /* FSClasses */,
 				CAA88A4829BC3CA4002FC112 /* main.swift */,
 			);
@@ -77,6 +80,14 @@
 				CAE9A39629BC48F900FBAAF8 /* RootDirectory.swift */,
 			);
 			path = FSClasses;
+			sourceTree = "<group>";
+		};
+		CAE9A39A29BC5CD000FBAAF8 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				CAE9A39829BC5C8100FBAAF8 /* Globals.swift */,
+			);
+			path = Globals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				CAA88A4929BC3CA4002FC112 /* main.swift in Sources */,
 				CAE9A39229BC3E8F00FBAAF8 /* AbstractFile.swift in Sources */,
 				CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */,
+				CAE9A39929BC5C8100FBAAF8 /* Globals.swift in Sources */,
 				CAE9A39729BC48F900FBAAF8 /* RootDirectory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

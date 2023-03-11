@@ -9,11 +9,9 @@ class AbstractFile {
     var parent: AbstractFile?
     var path: String {
         return nodes.count == 1 ?
-        pathSeparator :
-        nodes.map { $0.name }.joined(separator: pathSeparator)
+        Globals.pathSeparator :
+        nodes.map { $0.name }.joined(separator: Globals.pathSeparator)
     }
-    
-    let pathSeparator = "/"
     
     private(set) var name: String
     private var nodes: [AbstractFile] {
