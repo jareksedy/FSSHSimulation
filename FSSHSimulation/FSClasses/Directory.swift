@@ -6,23 +6,18 @@
 //
 
 class Directory: AbstractFile {
-    private(set) var files: [AbstractFile]
-    
-    init(parent: AbstractFile? = nil, name: String, files: [AbstractFile] = []) {
-        self.files = files
-        super.init(parent: parent, name: name)
-        
-        files.forEach { file in
-            file.parent = self
-        }
-    }
+    private(set) var files: [AbstractFile] = []
     
     override func list(withPath: Bool = true) {
-        withPath ? print(path) : print(name)
+        print(withPath ? path : name)
         
         files.forEach { file in
             file.list(withPath: withPath)
         }
+    }
+    
+    func add(file: AbstractFile) {
+        add(files: [file])
     }
     
     func add(files: [AbstractFile]) {
@@ -30,9 +25,5 @@ class Directory: AbstractFile {
             self.files.append(file)
             file.parent = self
         }
-    }
-    
-    func add(file: AbstractFile) {
-        add(files: [file])
     }
 }

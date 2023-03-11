@@ -6,7 +6,7 @@
 //
 
 class RootDirectory: Directory {
-    init(files: [AbstractFile] = []) {
-        super.init(name: "", files: files)
+    init() {
+        super.init(name: "")
     }
 }

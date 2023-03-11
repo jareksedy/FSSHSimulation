@@ -13,7 +13,8 @@ class AbstractFile {
         nodes.map { $0.name }.joined(separator: pathSeparator)
     }
     
-    private let pathSeparator = "/"
+    let pathSeparator = "/"
+    
     private(set) var name: String
     private var nodes: [AbstractFile] {
         var nodes = [self]

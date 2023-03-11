@@ -11,6 +11,6 @@ let directory1 = Directory(name: "Downloads")
 let directory4 = Directory(name: "Documents")
 let rootDirectory = RootDirectory()
 
-rootDirectory.add(files: [directory2, directory4])
+rootDirectory.add(files: [directory2, directory4, directory1])
 directory2.add(file: directory3)
-rootDirectory.list()
+rootDirectory.list(withPath: true)
