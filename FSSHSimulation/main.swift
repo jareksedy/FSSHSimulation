@@ -5,10 +5,12 @@
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-let folder3 = Folder(name: "Homework")
-let folder2 = Folder(name: "Desktop", files: [folder3])
-let folder1 = Folder(name: "Downloads")
-let folder4 = Folder(name: "Documents")
-let rootFolder = RootFolder(files:  [folder2, folder1, folder4])
+let directory3 = Directory(name: "Homework")
+let directory2 = Directory(name: "Desktop")
+let directory1 = Directory(name: "Downloads")
+let directory4 = Directory(name: "Documents")
+let rootDirectory = RootDirectory()
 
-rootFolder.list()
+rootDirectory.add(files: [directory2, directory4])
+directory2.add(file: directory3)
+rootDirectory.list()

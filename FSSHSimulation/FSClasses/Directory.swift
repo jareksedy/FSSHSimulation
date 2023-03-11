@@ -1,11 +1,11 @@
 //
-//  Folder.swift
+//  Directory.swift
 //  FSSHSimulation
 //
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-class Folder: AbstractFile {
+class Directory: AbstractFile {
     private(set) var files: [AbstractFile]
     
     init(parent: AbstractFile? = nil, name: String, files: [AbstractFile] = []) {
@@ -23,5 +23,16 @@ class Folder: AbstractFile {
         files.forEach { file in
             file.list(withPath: withPath)
         }
+    }
+    
+    func add(files: [AbstractFile]) {
+        files.forEach { file in
+            self.files.append(file)
+            file.parent = self
+        }
+    }
+    
+    func add(file: AbstractFile) {
+        add(files: [file])
     }
 }
