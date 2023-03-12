@@ -2,7 +2,7 @@
 //  String+condenseWhitespace.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 11.03.2023.
+//  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
 import Foundation
@@ -13,8 +13,21 @@ extension String {
         return components.filter { !$0.isEmpty }.joined(separator: " ")
     }
     
-    func toCommandClass() -> AnyClass? {
-        struct My { static let moduleName = String(reflecting: AbstractCommand.self).prefix { $0 != "." }}
-        return NSClassFromString("\(My.moduleName).\(self)")
+    func strip() -> String {
+        return self.trimmingCharacters(in: .whitespaces).condenseWhitespace()
+    }
+    
+    func toCommand() -> String? {
+        return self.components(separatedBy: " ").first?.lowercased()
+    }
+    
+    func toArguments() -> [String] {
+        return Array(self.components(separatedBy: " ").dropFirst())
+    }
+    
+    func toClass() -> AbstractCommand.Type? {
+        let className = self.capitalized
+        let moduleName = String(reflecting: Environment.self).prefix { $0 != "." }
+        return NSClassFromString("\(moduleName).\(className)") as? AbstractCommand.Type
     }
 }
