@@ -30,8 +30,11 @@ extension String {
     }
     
     func toClass() -> AbstractCommand.Type? {
-        let className = self.capitalized
-        let moduleName = String(reflecting: Environment.self).prefix { $0 != "." }
-        return NSClassFromString("\(moduleName).\(className)") as? AbstractCommand.Type
+        guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
+        return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? AbstractCommand.Type
+    }
+    
+    func format(_ args: CVarArg...) -> String {
+        return String(format: self, arguments: args)
     }
 }

@@ -6,13 +6,18 @@
 //
 
 fileprivate enum Messages {
+    static let usage = "usage: %@: directory_name"
     static let notFound = "no such file or directory:"
 }
 
-class Chdir: AbstractCommand {
+final class Chdir: AbstractCommand {
     override func run(arguments: [String]) {
-        guard let directoryName = arguments.first, let currentDirectory = environment.currentDirectory as? Directory else { return }
-        currentDirectory.files.forEach { file in
+        guard let directoryName = arguments.first else {
+            print(Messages.usage.format(commandName))
+            return
+        }
+        
+        currentDirectory?.files.forEach { file in
             if file.name == directoryName {
                 environment.currentDirectory = file
             }

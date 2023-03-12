@@ -6,7 +6,7 @@
 //
 
 fileprivate enum Messages {
-    static let usage = "usage: mkdir directory_name ..."
+    static let usage = "usage: mkdir directory_name"
     static let notFound = "no such file or directory:"
 }
 

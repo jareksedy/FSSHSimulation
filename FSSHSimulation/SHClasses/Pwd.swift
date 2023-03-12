@@ -6,13 +6,13 @@
 //
 
 fileprivate enum Messages {
-    static let tooManyArguments = "pwd: too many arguments"
+    static let tooManyArguments = "%@: too many arguments"
 }
 
-class Pwd: AbstractCommand {
+final class Pwd: AbstractCommand {
     override func run(arguments: [String]) {
         guard arguments.isEmpty else {
-            print(Messages.tooManyArguments)
+            print(Messages.tooManyArguments.format(commandName))
             return
         }
         
