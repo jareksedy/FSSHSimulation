@@ -7,23 +7,22 @@
 
 import Foundation
 
-let rootDirectory = RootDirectory()
-var isRunning = true
+let session = Session.shared
 
-while isRunning {
-    print(Globals.prompt, terminator: Globals.whitespace)
+while session.isRunning {
+    print(Globals.prompt, terminator: Globals.terminator)
     
     if let input = readLine()?.trimmingCharacters(in: .whitespaces).condenseWhitespace(),
        let command = input.split(separator: " ").first {
         
         switch command.lowercased() {
         case "exit":
-            isRunning = false
+            session.isRunning = false
             
         default:
             let className = String(command.capitalized)
             if let theClass = NSClassFromString("FSSHSimulation." + className) as? AbstractCommand.Type {
-                let object = theClass.init(parent: rootDirectory)
+                let object = theClass.init(parent: session.rootDirectory)
                 object.run(arguments: ["test", "vvv"])
             } else {
                 print("\(Strings.notFound) \(command)")
