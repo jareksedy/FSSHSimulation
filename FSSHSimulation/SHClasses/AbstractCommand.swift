@@ -5,11 +5,9 @@
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-import Foundation
-
 class AbstractCommand {
     let environment = Environment.shared
-    let currentDirectory = Environment.shared.currentDirectory as? Directory
+    let currentDirectory = Environment.shared.currentDirectory as! Directory
     
     var commandName: String {
         return String(describing: self).components(separatedBy: ".").last?.lowercased() ?? ""

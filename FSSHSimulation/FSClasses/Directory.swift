@@ -16,6 +16,10 @@ class Directory: AbstractFile {
         }
     }
     
+    func getNode(by fileName: String) -> AbstractFile? {
+        return files.first(where: { $0.name == fileName })
+    }
+    
     func add(file: AbstractFile) {
         add(files: [file])
     }

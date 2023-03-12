@@ -7,4 +7,5 @@
 
 enum Globals {
     static let pathSeparator = "/"
+    static let levelUp = ".."
 }

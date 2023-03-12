@@ -14,7 +14,7 @@ while environment.isRunning {
         if let commandInstance = command.toClass()?.init() {
             commandInstance.run(arguments: input.toArguments())
         } else {
-            print("\(Strings.notFound) \(command)")
+            print(Strings.Messages.commandNotFound.format(command))
         }
     }
 }

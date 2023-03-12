@@ -5,21 +5,32 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
-fileprivate enum Messages {
-    static let usage = "usage: %@: directory_name"
-    static let notFound = "no such file or directory:"
-}
-
 final class Chdir: AbstractCommand {
     override func run(arguments: [String]) {
-        guard let directoryName = arguments.first else {
-            print(Messages.usage.format(commandName))
+        guard let argument = arguments.first else {
+            print(Strings.Messages.usageDirectoryName.format(commandName))
             return
         }
         
-        currentDirectory?.files.forEach { file in
-            if file.name == directoryName {
-                environment.currentDirectory = file
+        guard arguments.count == 1 else {
+            print(Strings.Messages.tooManyArguments.format(commandName))
+            return
+        }
+        
+        if argument.isPath() {
+            print("Looks like a path")
+        } else {
+            switch argument {
+            case Globals.levelUp:
+                environment.currentDirectory = environment.currentDirectory.parent ?? environment.rootDirectory
+                
+            default:
+                if let node = currentDirectory.getNode(by: argument) {
+                    environment.currentDirectory = node
+                } else {
+                    print(Strings.Messages.noSuchFileOrDirectory.format(commandName, argument))
+                    return
+                }
             }
         }
     }

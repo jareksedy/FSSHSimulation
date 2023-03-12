@@ -37,4 +37,8 @@ extension String {
     func format(_ args: CVarArg...) -> String {
         return String(format: self, arguments: args)
     }
+    
+    func isPath() -> Bool {
+        return self.contains(Globals.pathSeparator)
+    }
 }
