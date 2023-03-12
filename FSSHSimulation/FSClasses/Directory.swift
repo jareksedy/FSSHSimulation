@@ -16,8 +16,45 @@ class Directory: AbstractFile {
         }
     }
     
-    func getNode(by fileName: String) -> AbstractFile? {
-        return files.first(where: { $0.name == fileName })
+    override func getNode(by path: String) -> AbstractFile? {
+        var pointer: AbstractFile? = self
+        
+        guard !path.isEmpty else { return pointer }
+        
+        let pathTokens = path.tokenize()
+        
+        guard let token = pathTokens.first else { return nil }
+        
+        switch token {
+        case Globals.pathSeparator:
+            pointer = Environment.shared.rootDirectory
+        case Globals.levelUp:
+            pointer = self.parent
+        default:
+            pointer = self.hasNode(name: token)
+        }
+        
+        return pointer?.getNode(by: pathTokens.dropFirst().joined())
+    }
+    
+//    func getNode(by path: String) -> AbstractFile? {
+//        var pointer: AbstractFile? = self
+//        let components = path.split(separator: "/").map(String.init)
+//        guard !components.isEmpty else { return Environment.shared.rootDirectory }
+//
+//        for component in components {
+//            if let directory = pointer as? Directory {
+//                pointer = directory.hasNode(name: component)
+//            } else {
+//                return nil
+//            }
+//        }
+//
+//        return pointer
+//    }
+    
+    func hasNode(name: String) -> AbstractFile? {
+        return files.first(where: { $0.name == name })
     }
     
     func add(file: AbstractFile) {

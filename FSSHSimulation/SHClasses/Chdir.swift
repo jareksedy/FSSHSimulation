@@ -7,7 +7,7 @@
 
 final class Chdir: AbstractCommand {
     override func run(arguments: [String]) {
-        guard let argument = arguments.first else {
+        guard let path = arguments.first else {
             print(Strings.Messages.usageDirectoryName.format(commandName))
             return
         }
@@ -17,21 +17,11 @@ final class Chdir: AbstractCommand {
             return
         }
         
-        if argument.isPath() {
-            print("Looks like a path")
-        } else {
-            switch argument {
-            case Globals.levelUp:
-                environment.currentDirectory = environment.currentDirectory.parent ?? environment.rootDirectory
-                
-            default:
-                if let node = currentDirectory.getNode(by: argument) {
-                    environment.currentDirectory = node
-                } else {
-                    print(Strings.Messages.noSuchFileOrDirectory.format(commandName, argument))
-                    return
-                }
-            }
+        guard let directory = currentDirectory.getNode(by: path) as? Directory else {
+            print(Strings.Messages.noSuchFileOrDirectory.format(commandName, path))
+            return
         }
+        
+        environment.currentDirectory = directory
     }
 }

@@ -34,4 +34,8 @@ class AbstractFile {
     func list(withPath: Bool = true) {
         fatalError("Implement this method in child class.")
     }
+    
+    func getNode(by path: String) -> AbstractFile? {
+        fatalError("Implement this method in child class.")
+    }
 }

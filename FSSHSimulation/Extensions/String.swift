@@ -38,7 +38,27 @@ extension String {
         return String(format: self, arguments: args)
     }
     
-    func isPath() -> Bool {
-        return self.contains(Globals.pathSeparator)
+    func tokenize(delimiters: [String] = [Globals.pathSeparator, Globals.levelUp]) -> [String] {
+        var tokenArray: [String] = []
+        var currentToken: String = ""
+        
+        for char in self {
+            let charStr = String(char)
+            if delimiters.contains(charStr) {
+                if !currentToken.isEmpty {
+                    tokenArray.append(currentToken)
+                    currentToken = ""
+                }
+                tokenArray.append(charStr)
+            } else {
+                currentToken.append(char)
+            }
+        }
+        
+        if !currentToken.isEmpty {
+            tokenArray.append(currentToken)
+        }
+        
+        return tokenArray
     }
 }
