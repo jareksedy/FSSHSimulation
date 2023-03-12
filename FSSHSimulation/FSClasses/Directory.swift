@@ -24,8 +24,8 @@ class Directory: AbstractFile {
         
         switch token {
         case Globals.pathSeparator:
-            if isInitial { pointer = Environment.shared.rootDirectory }
-        case Globals.levelUp:
+            if isInitial { pointer = root }
+        case Globals.directoryUp:
             pointer = self.parent
         default:
             pointer = hasNode(name: token)

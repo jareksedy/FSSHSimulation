@@ -7,7 +7,9 @@
 
 class Environment {
     let rootDirectory = RootDirectory()
-    let prompt = "$"
+    let promptChar = "$"
+    let userName = "root"
+    let hostName = "localhost"
     
     var currentDirectory: AbstractFile
     var isRunning = true
@@ -15,6 +17,12 @@ class Environment {
     static let shared = Environment()
     
     private init() {
-        self.currentDirectory = rootDirectory
+        let homeDirectory = Directory(name: "home")
+        let userDirectory = Directory(name: "root")
+        
+        homeDirectory.add(file: userDirectory)
+        rootDirectory.add(file: homeDirectory)
+        
+        self.currentDirectory = userDirectory
     }
 }
