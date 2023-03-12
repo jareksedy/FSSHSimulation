@@ -25,6 +25,10 @@ extension String {
         return Array(self.components(separatedBy: " ").dropFirst())
     }
     
+    func toPath() -> [String] {
+        return Array(self.components(separatedBy: Globals.pathSeparator).dropFirst())
+    }
+    
     func toClass() -> AbstractCommand.Type? {
         let className = self.capitalized
         let moduleName = String(reflecting: Environment.self).prefix { $0 != "." }
