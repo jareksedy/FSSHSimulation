@@ -14,6 +14,8 @@
 		CAE9A39929BC5C8100FBAAF8 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39829BC5C8100FBAAF8 /* Globals.swift */; };
 		CAE9A3AA29BC640200FBAAF8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3A929BC640200FBAAF8 /* String.swift */; };
 		CAE9A3AD29BC66D500FBAAF8 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AC29BC66D500FBAAF8 /* Strings.swift */; };
+		CAE9A3AF29BC6ABB00FBAAF8 /* AbstractCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */; };
+		CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3B329BC6BA300FBAAF8 /* Find.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +39,8 @@
 		CAE9A39829BC5C8100FBAAF8 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		CAE9A3A929BC640200FBAAF8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAE9A3AC29BC66D500FBAAF8 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractCommand.swift; sourceTree = "<group>"; };
+		CAE9A3B329BC6BA300FBAAF8 /* Find.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				CAE9A3AB29BC640700FBAAF8 /* Extensions */,
-				CAE9A39A29BC5CD000FBAAF8 /* Globals */,
+				CAE9A39A29BC5CD000FBAAF8 /* Session */,
 				CAE9A39329BC3E9400FBAAF8 /* FSClasses */,
+				CAE9A3B029BC6ABE00FBAAF8 /* SHClasses */,
 				CAA88A4829BC3CA4002FC112 /* main.swift */,
 			);
 			path = FSSHSimulation;
@@ -87,13 +92,13 @@
 			path = FSClasses;
 			sourceTree = "<group>";
 		};
-		CAE9A39A29BC5CD000FBAAF8 /* Globals */ = {
+		CAE9A39A29BC5CD000FBAAF8 /* Session */ = {
 			isa = PBXGroup;
 			children = (
 				CAE9A39829BC5C8100FBAAF8 /* Globals.swift */,
 				CAE9A3AC29BC66D500FBAAF8 /* Strings.swift */,
 			);
-			path = Globals;
+			path = Session;
 			sourceTree = "<group>";
 		};
 		CAE9A3AB29BC640700FBAAF8 /* Extensions */ = {
@@ -102,6 +107,15 @@
 				CAE9A3A929BC640200FBAAF8 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAE9A3B029BC6ABE00FBAAF8 /* SHClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */,
+				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
+			);
+			path = SHClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +179,11 @@
 				CAA88A4929BC3CA4002FC112 /* main.swift in Sources */,
 				CAE9A39229BC3E8F00FBAAF8 /* AbstractFile.swift in Sources */,
 				CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */,
+				CAE9A3AF29BC6ABB00FBAAF8 /* AbstractCommand.swift in Sources */,
 				CAE9A39929BC5C8100FBAAF8 /* Globals.swift in Sources */,
 				CAE9A3AA29BC640200FBAAF8 /* String.swift in Sources */,
 				CAE9A39729BC48F900FBAAF8 /* RootDirectory.swift in Sources */,
+				CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */,
 				CAE9A3AD29BC66D500FBAAF8 /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

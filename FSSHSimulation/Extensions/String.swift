@@ -12,4 +12,9 @@ extension String {
         let components = self.components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
     }
+    
+    func toCommandClass() -> AnyClass? {
+        struct My { static let moduleName = String(reflecting: AbstractCommand.self).prefix { $0 != "." }}
+        return NSClassFromString("\(My.moduleName).\(self)")
+    }
 }
