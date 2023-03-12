@@ -2,21 +2,24 @@
 //  Mkdir.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 12.03.2023.
+//  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
+fileprivate enum Messages {
+    static let usage = "usage: mkdir directory_name ..."
+    static let notFound = "no such file or directory:"
+}
+
 class Mkdir: AbstractCommand {
-    let usageInfo = "usage: mkdir directory_name ..."
-    
     override func run(arguments: [String]) {
         guard !arguments.isEmpty else {
-            print(usageInfo)
+            print(Messages.usage)
             return
         }
         
         arguments.forEach { argument in
             let directory = Directory(name: argument)
-            environment.rootDirectory.add(file: directory)
+            (environment.currentDirectory as? Directory)?.add(file: directory)
         }
     }
 }

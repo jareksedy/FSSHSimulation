@@ -7,9 +7,9 @@
 
 class Environment {
     let rootDirectory = RootDirectory()
-    let currentDirectory: AbstractFile
     let prompt = "$"
     
+    var currentDirectory: AbstractFile
     var isRunning = true
     
     static let shared = Environment()
