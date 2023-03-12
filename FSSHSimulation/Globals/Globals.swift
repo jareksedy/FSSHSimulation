@@ -7,6 +7,4 @@
 
 enum Globals {
     static let pathSeparator = "/"
-    static let prompt = "$"
-    static let terminator = " "
 }
