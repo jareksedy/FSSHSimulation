@@ -15,9 +15,8 @@ while environment.isRunning {
     if let input = readLine()?.strip(), let command = input.toCommand(), command != "" {
         let arguments = input.toArguments()
         
-        if let commandClass = command.toClass() {
-            let instance = commandClass.init(parent: environment.rootDirectory)
-            instance.run(arguments: arguments)
+        if let commandInstance = command.toClass()?.init(parent: environment.rootDirectory) {
+            commandInstance.run(arguments: arguments)
         } else {
             print("\(Strings.notFound) \(command)")
         }
