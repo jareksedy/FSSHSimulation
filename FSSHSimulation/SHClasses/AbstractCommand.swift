@@ -8,11 +8,9 @@
 import Foundation
 
 class AbstractCommand {
-    var parent: AbstractFile?
+    let environment = Environment.shared
     
-    required init(parent: AbstractFile? = nil) {
-        self.parent = parent
-    }
+    required init() {}
     
     func run(arguments: [String]) {
         fatalError("Implement this method in child class.")
