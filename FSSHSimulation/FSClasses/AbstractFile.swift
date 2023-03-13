@@ -6,22 +6,26 @@
 //
 
 class AbstractFile {
-    var parent: AbstractFile?
+    weak var parent: AbstractFile?
     var root: AbstractFile? {
         return nodes.first
     }
+    
+    var home: AbstractFile? {
+        return getNode(by: "/home/root")
+    }
+    
     var path: String {
         return nodes.count == 1 ?
         Globals.pathSeparator :
         nodes.map { $0.name }.joined(separator: Globals.pathSeparator)
     }
+    
     var directoryName: String {
         let name = nodes.last(where: { $0 is Directory })?.name
-        
         if name == nil || name == "" {
             return Globals.pathSeparator
         }
-        
         return name!
     }
     

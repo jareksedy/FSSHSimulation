@@ -38,7 +38,7 @@ extension String {
         return String(format: self, arguments: args)
     }
     
-    func tokenize(delimiters: [String] = [Globals.pathSeparator, Globals.directoryUp]) -> [String] {
+    func tokenize(delimiters: [String] = [Globals.pathSeparator, Globals.directoryUp, Globals.homeDirectory]) -> [String] {
         var tokenArray: [String] = []
         var currentToken: String = ""
         
