@@ -21,7 +21,7 @@ class Directory: AbstractFile {
         let tokens = path.tokenize()
         guard let token = tokens.first else { return self }
         
-        let next = tokens.dropFirst().joined(separator: "/")
+        let next = tokens.dropFirst().joined(separator: .slash)
         
         var pointer: AbstractFile? = self
 
