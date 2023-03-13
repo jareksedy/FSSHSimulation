@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+    static var empty: String { return "" }
     static var slash: String { return "/" }
     static var doubleDot: String { return ".." }
     static var tilde: String { return "~" }
@@ -29,6 +30,10 @@ extension String {
         return Array(self.components(separatedBy: " ").dropFirst())
     }
     
+    func tokenize() -> [String] {
+        return self.components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
+    }
+    
     func toClass() -> AbstractCommand.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
         return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? AbstractCommand.Type
@@ -36,29 +41,5 @@ extension String {
     
     func format(_ args: CVarArg...) -> String {
         return String(format: self, arguments: args)
-    }
-    
-    func tokenize(delimiters: [String] = [.slash, .doubleDot, .tilde]) -> [String] {
-        var tokenArray: [String] = []
-        var currentToken: String = ""
-        
-        for char in self {
-            let charStr = String(char)
-            if delimiters.contains(charStr) {
-                if !currentToken.isEmpty {
-                    tokenArray.append(currentToken)
-                    currentToken = ""
-                }
-                tokenArray.append(charStr)
-            } else {
-                currentToken.append(char)
-            }
-        }
-        
-        if !currentToken.isEmpty {
-            tokenArray.append(currentToken)
-        }
-        
-        return tokenArray
     }
 }

@@ -21,9 +21,11 @@ class AbstractFile {
     
     var directoryName: String {
         let name = nodes.last(where: { $0 is Directory })?.name
+        
         if name == nil || name == "" {
             return .slash
         }
+        
         return name!
     }
     
@@ -49,7 +51,7 @@ class AbstractFile {
         fatalError("Implement this method in child class.")
     }
     
-    func getNode(by path: String, isInitial: Bool = true) -> AbstractFile? {
+    func getNode(by path: String) -> AbstractFile? {
         fatalError("Implement this method in child class.")
     }
 }

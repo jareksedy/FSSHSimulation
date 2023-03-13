@@ -16,25 +16,30 @@ class Directory: AbstractFile {
         }
     }
     
-    override func getNode(by path: String, isInitial: Bool = true) -> AbstractFile? {
-        guard let token = path.tokenize().first else { return self }
+    override func getNode(by path: String) -> AbstractFile? {
+        guard path != "" else { return self }
+        let tokens = path.tokenize()
+        guard let token = tokens.first else { return self }
+        
+        let next = tokens.dropFirst().joined(separator: "/")
         
         var pointer: AbstractFile? = self
-        let pathTokens = path.tokenize()
-        
+
         switch token {
-        case .slash:
-            if isInitial { pointer = root }
+        case .empty:
+            pointer = root
+            
         case .tilde:
-            pointer = self.home
+            pointer = home
+            
         case .doubleDot:
-            pointer = self.parent
+            pointer = parent == nil ? self : parent
+            
         default:
             pointer = hasNode(name: token)
         }
         
-        let next = pathTokens.dropFirst().joined()
-        return pointer?.getNode(by: next, isInitial: false)
+        return pointer?.getNode(by: next)
     }
     
     func hasNode(name: String) -> AbstractFile? {
