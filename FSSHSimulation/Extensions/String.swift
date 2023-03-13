@@ -8,6 +8,10 @@
 import Foundation
 
 extension String {
+    static var slash: String { return "/" }
+    static var doubleDot: String { return ".." }
+    static var tilde: String { return "~" }
+    
     func condenseWhitespace() -> String {
         let components = self.components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
@@ -25,10 +29,6 @@ extension String {
         return Array(self.components(separatedBy: " ").dropFirst())
     }
     
-    func toPath() -> [String] {
-        return Array(self.components(separatedBy: Globals.pathSeparator).dropFirst())
-    }
-    
     func toClass() -> AbstractCommand.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
         return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? AbstractCommand.Type
@@ -38,7 +38,7 @@ extension String {
         return String(format: self, arguments: args)
     }
     
-    func tokenize(delimiters: [String] = [Globals.pathSeparator, Globals.directoryUp, Globals.homeDirectory]) -> [String] {
+    func tokenize(delimiters: [String] = [.slash, .doubleDot, .tilde]) -> [String] {
         var tokenArray: [String] = []
         var currentToken: String = ""
         

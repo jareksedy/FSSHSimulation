@@ -23,15 +23,12 @@ class Directory: AbstractFile {
         let pathTokens = path.tokenize()
         
         switch token {
-        case Globals.pathSeparator:
+        case .slash:
             if isInitial { pointer = root }
-            
-        case Globals.homeDirectory:
+        case .tilde:
             pointer = self.home
-            
-        case Globals.directoryUp:
+        case .doubleDot:
             pointer = self.parent
-            
         default:
             pointer = hasNode(name: token)
         }

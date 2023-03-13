@@ -16,15 +16,13 @@ class AbstractFile {
     }
     
     var path: String {
-        return nodes.count == 1 ?
-        Globals.pathSeparator :
-        nodes.map { $0.name }.joined(separator: Globals.pathSeparator)
+        return nodes.count == 1 ? .slash : nodes.map { $0.name }.joined(separator: .slash)
     }
     
     var directoryName: String {
         let name = nodes.last(where: { $0 is Directory })?.name
         if name == nil || name == "" {
-            return Globals.pathSeparator
+            return .slash
         }
         return name!
     }
