@@ -24,17 +24,14 @@ class Directory: AbstractFile {
         let next = tokens.dropFirst().joined(separator: .slash)
         
         var pointer: AbstractFile? = self
-
+        
         switch token {
         case .empty:
             pointer = root
-            
         case .tilde:
             pointer = home
-            
         case .doubleDot:
             pointer = parent == nil ? self : parent
-            
         default:
             pointer = hasNode(name: token)
         }
