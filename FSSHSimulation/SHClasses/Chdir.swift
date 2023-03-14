@@ -5,7 +5,7 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
-final class Chdir: AbstractCommand {
+class Chdir: AbstractCommand {
     override func run(arguments: [String]) {
         guard let path = arguments.first else {
             print(Strings.Messages.usageDirectoryName.format(commandName))
