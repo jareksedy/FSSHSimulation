@@ -30,6 +30,8 @@ class Directory: AbstractFile {
             pointer = root
         case .tilde:
             pointer = home
+        case .dot:
+            pointer = self
         case .doubleDot:
             pointer = parent == nil ? self : parent
         default:

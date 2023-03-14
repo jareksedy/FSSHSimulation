@@ -10,6 +10,7 @@ import Foundation
 extension String {
     static var empty: String { return "" }
     static var slash: String { return "/" }
+    static var dot: String { return "." }
     static var doubleDot: String { return ".." }
     static var tilde: String { return "~" }
     
