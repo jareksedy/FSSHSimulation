@@ -14,7 +14,7 @@ final class Mkdir: AbstractCommand {
         
         arguments.forEach { argument in
             let directory = Directory(name: argument)
-            (environment.currentDirectory as? Directory)?.add(file: directory)
+            environment.currentDirectory.add(node: directory)
         }
     }
 }

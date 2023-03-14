@@ -7,6 +7,7 @@
 
 final class Find: AbstractCommand {
     override func run(arguments: [String]) {
-        environment.rootDirectory.list()
+        print("This is a stub!")
+        //environment.rootDirectory.list()
     }
 }

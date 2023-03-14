@@ -5,65 +5,39 @@
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-class Directory: AbstractFile {
-    private(set) var files: [AbstractFile] = []
+final class Directory: FileSystemNode {
+    weak var parent: Directory?
+    var name: String
     
-    override func list(withPath: Bool = true) {
-        print(withPath ? path : name)
-        
-        files.forEach { file in
-            file.list(withPath: withPath)
+    private(set) var nodes: [FileSystemNode] = []
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func hasNode(name: String) -> FileSystemNode? {
+        return nodes.first(where: { $0.name == name })
+    }
+    
+    func add(node: FileSystemNode) {
+        add(nodes: [node])
+    }
+    
+    func add(nodes: [FileSystemNode]) {
+        nodes.forEach { node in
+            self.nodes.append(node)
+            node.parent = self
         }
     }
     
-    override func getNode(by path: String) -> AbstractFile? {
-        guard path != "" else { return self }
-        let tokens = path.tokenize()
-        guard let token = tokens.first else { return self }
-        
-        let next = tokens.dropFirst().joined(separator: .slash)
-        
-        var pointer: AbstractFile? = self
-        
-        switch token {
-        case .empty:
-            pointer = root
-        case .tilde:
-            pointer = home
-        case .dot:
-            pointer = self
-        case .doubleDot:
-            pointer = parent == nil ? self : parent
-        default:
-            pointer = hasNode(name: token)
-        }
-        
-        return pointer?.getNode(by: next)
+    func remove(node: FileSystemNode) {
+        remove(nodes: [node])
     }
     
-    func hasNode(name: String) -> AbstractFile? {
-        return files.first(where: { $0.name == name })
-    }
-    
-    func add(file: AbstractFile) {
-        add(files: [file])
-    }
-    
-    func add(files: [AbstractFile]) {
-        files.forEach { file in
-            self.files.append(file)
-            file.parent = self
-        }
-    }
-    
-    func remove(file: AbstractFile) {
-        remove(files: [file])
-    }
-    
-    func remove(files: [AbstractFile]) {
-        files.forEach { file in
-            self.files.removeAll(where: { $0 === file })
-            file.parent = nil
+    func remove(nodes: [FileSystemNode]) {
+        nodes.forEach { node in
+            node.parent = nil
+            self.nodes.removeAll(where: { $0 === node })
         }
     }
 }
