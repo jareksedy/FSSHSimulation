@@ -36,9 +36,9 @@ extension String {
         return self.components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
     }
     
-    func toClass() -> AbstractCommand.Type? {
+    func toClass() -> CommandProtocol.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
-        return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? AbstractCommand.Type
+        return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? CommandProtocol.Type
     }
     
     func format(_ args: CVarArg...) -> String {

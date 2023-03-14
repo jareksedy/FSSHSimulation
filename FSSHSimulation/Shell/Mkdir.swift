@@ -5,8 +5,8 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
-final class Mkdir: AbstractCommand {
-    override func run(arguments: [String]) {
+final class Mkdir: CommandProtocol {
+    func run(arguments: [String]) {
         guard !arguments.isEmpty else {
             print(Strings.Messages.usageDirectoryName.format(commandName))
             return

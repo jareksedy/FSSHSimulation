@@ -24,7 +24,7 @@ extension FileSystemNode {
     
     var directoryName: String {
         let name = nodes.last(where: { $0 is Directory })?.name
-        return name == nil || name == "" ? .slash : name!
+        return name == nil || name == .empty ? .slash : name!
     }
     
     var path: String {
@@ -41,21 +41,16 @@ extension FileSystemNode {
     
     func getNode(by path: String) -> FileSystemNode? {
         let tokens = path.tokenize()
-        var pointer: FileSystemNode? = self
-        
         guard !path.isEmpty, let token = tokens.first else { return self }
         
+        var pointer: FileSystemNode? = self
+        
         switch token {
-        case .empty:
-            pointer = root
-        case .tilde:
-            pointer = home
-        case .dot:
-            pointer = self
-        case .doubleDot:
-            pointer = parent ?? self
-        default:
-            pointer = hasNode(name: token)
+        case .empty: pointer = root
+        case .tilde: pointer = home
+        case .dot: pointer = self
+        case .doubleDot: pointer = parent ?? self
+        default: pointer = hasNode(name: token)
         }
         
         let next = tokens.dropFirst().joined(separator: .slash)

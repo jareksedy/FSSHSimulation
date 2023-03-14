@@ -25,8 +25,8 @@ final class Directory: FileSystemNode {
     
     func add(nodes: [FileSystemNode]) {
         nodes.forEach { node in
-            self.nodes.append(node)
             node.parent = self
+            self.nodes.append(node)
         }
     }
     

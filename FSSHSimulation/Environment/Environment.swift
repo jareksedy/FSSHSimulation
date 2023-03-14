@@ -12,7 +12,7 @@ class Environment {
     let userName = "root"
     let hostName = "localhost"
     
-    var currentDirectory: FileSystemNode
+    var currentDirectory: Directory
     var isRunning = true
     
     static let shared = Environment()

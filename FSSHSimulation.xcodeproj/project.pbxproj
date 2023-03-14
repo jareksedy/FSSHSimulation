@@ -19,7 +19,7 @@
 		CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39429BC466900FBAAF8 /* Directory.swift */; };
 		CAE9A3AA29BC640200FBAAF8 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3A929BC640200FBAAF8 /* String.swift */; };
 		CAE9A3AD29BC66D500FBAAF8 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AC29BC66D500FBAAF8 /* Strings.swift */; };
-		CAE9A3AF29BC6ABB00FBAAF8 /* AbstractCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */; };
+		CAE9A3AF29BC6ABB00FBAAF8 /* CommandProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */; };
 		CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3B329BC6BA300FBAAF8 /* Find.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		CAE9A39429BC466900FBAAF8 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		CAE9A3A929BC640200FBAAF8 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAE9A3AC29BC66D500FBAAF8 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractCommand.swift; sourceTree = "<group>"; };
+		CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandProtocol.swift; sourceTree = "<group>"; };
 		CAE9A3B329BC6BA300FBAAF8 /* Find.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,7 @@
 		CAE9A3B029BC6ABE00FBAAF8 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */,
+				CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */,
 				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
 				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
 				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
@@ -206,7 +206,7 @@
 				CAA88A4929BC3CA4002FC112 /* main.swift in Sources */,
 				CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */,
 				CA6B186A29BD996000A44F5F /* Chdir.swift in Sources */,
-				CAE9A3AF29BC6ABB00FBAAF8 /* AbstractCommand.swift in Sources */,
+				CAE9A3AF29BC6ABB00FBAAF8 /* CommandProtocol.swift in Sources */,
 				CA6B186E29BDCBD600A44F5F /* Cd.swift in Sources */,
 				CAE9A3AA29BC640200FBAAF8 /* String.swift in Sources */,
 				CA6B187029BF900700A44F5F /* Temp.swift in Sources */,

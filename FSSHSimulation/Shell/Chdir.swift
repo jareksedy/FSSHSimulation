@@ -5,8 +5,10 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
-class Chdir: AbstractCommand {
-    override func run(arguments: [String]) {
+class Chdir: CommandProtocol {
+    required init() {}
+    
+    func run(arguments: [String]) {
         guard let path = arguments.first else {
             print(Strings.Messages.usageDirectoryName.format(commandName))
             return
