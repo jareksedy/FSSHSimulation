@@ -8,12 +8,12 @@
 import Foundation
 
 extension String {
-    static var empty: String { return "" }
-    static var whitespace: String { return " " }
-    static var slash: String { return "/" }
-    static var dot: String { return "." }
-    static var doubleDot: String { return ".." }
-    static var tilde: String { return "~" }
+    static var empty: String { "" }
+    static var whitespace: String { " " }
+    static var slash: String { "/" }
+    static var dot: String { "." }
+    static var doubleDot: String { ".." }
+    static var tilde: String { "~" }
     
     func condenseWhitespace() -> String {
         let components = self.components(separatedBy: .whitespacesAndNewlines)

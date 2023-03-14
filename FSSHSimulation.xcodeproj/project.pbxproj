@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
-		CA6B186229BD819F00A44F5F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186029BD7EE800A44F5F /* Globals.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
 		CA6B186A29BD996000A44F5F /* Chdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186929BD996000A44F5F /* Chdir.swift */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		CA6B186029BD7EE800A44F5F /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
 		CA6B186929BD996000A44F5F /* Chdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chdir.swift; sourceTree = "<group>"; };
@@ -68,14 +66,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA6B186329BD82A800A44F5F /* Globals */ = {
-			isa = PBXGroup;
-			children = (
-				CA6B186029BD7EE800A44F5F /* Globals.swift */,
-			);
-			path = Globals;
-			sourceTree = "<group>";
-		};
 		CA6B186429BD82BF00A44F5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,23 +95,22 @@
 			children = (
 				CAE9A39A29BC5CD000FBAAF8 /* Environment */,
 				CAE9A3AB29BC640700FBAAF8 /* Extensions */,
-				CA6B186329BD82A800A44F5F /* Globals */,
-				CAE9A39329BC3E9400FBAAF8 /* FSClasses */,
-				CAE9A3B029BC6ABE00FBAAF8 /* SHClasses */,
+				CAE9A39329BC3E9400FBAAF8 /* FileSystem */,
+				CAE9A3B029BC6ABE00FBAAF8 /* Shell */,
 				CA6B186429BD82BF00A44F5F /* Resources */,
 				CAA88A4829BC3CA4002FC112 /* main.swift */,
 			);
 			path = FSSHSimulation;
 			sourceTree = "<group>";
 		};
-		CAE9A39329BC3E9400FBAAF8 /* FSClasses */ = {
+		CAE9A39329BC3E9400FBAAF8 /* FileSystem */ = {
 			isa = PBXGroup;
 			children = (
 				CAE9A39129BC3E8F00FBAAF8 /* AbstractFile.swift */,
 				CAE9A39429BC466900FBAAF8 /* Directory.swift */,
 				CAE9A39629BC48F900FBAAF8 /* RootDirectory.swift */,
 			);
-			path = FSClasses;
+			path = FileSystem;
 			sourceTree = "<group>";
 		};
 		CAE9A39A29BC5CD000FBAAF8 /* Environment */ = {
@@ -140,7 +129,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CAE9A3B029BC6ABE00FBAAF8 /* SHClasses */ = {
+		CAE9A3B029BC6ABE00FBAAF8 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
 				CAE9A3AE29BC6ABB00FBAAF8 /* AbstractCommand.swift */,
@@ -152,7 +141,7 @@
 				CA6B186F29BF900700A44F5F /* Temp.swift */,
 				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 			);
-			path = SHClasses;
+			path = Shell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +216,6 @@
 				CA6B187029BF900700A44F5F /* Temp.swift in Sources */,
 				CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */,
 				CA6B186C29BDAFF600A44F5F /* Pwd.swift in Sources */,
-				CA6B186229BD819F00A44F5F /* Globals.swift in Sources */,
 				CAE9A3AD29BC66D500FBAAF8 /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
