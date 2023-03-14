@@ -9,6 +9,7 @@ import Foundation
 
 extension String {
     static var empty: String { return "" }
+    static var whitespace: String { return " " }
     static var slash: String { return "/" }
     static var dot: String { return "." }
     static var doubleDot: String { return ".." }
@@ -20,7 +21,7 @@ extension String {
     }
     
     func strip() -> String {
-        return self.trimmingCharacters(in: .whitespaces).condenseWhitespace()
+        return self.trimmingCharacters(in: .whitespaces).condenseWhitespace().filterAllowedCharacters()
     }
     
     func toCommand() -> String? {
@@ -42,5 +43,12 @@ extension String {
     
     func format(_ args: CVarArg...) -> String {
         return String(format: self, arguments: args)
+    }
+    
+    func filterAllowedCharacters() -> String {
+        let alphanumerics = CharacterSet.alphanumerics
+        let other = CharacterSet(charactersIn: .empty + .whitespace + .slash + .dot + .doubleDot + .tilde)
+        let allowedCharacterSet = alphanumerics.union(other)
+        return String(self.unicodeScalars.filter { allowedCharacterSet.contains($0) })
     }
 }
