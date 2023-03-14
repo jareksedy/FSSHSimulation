@@ -40,13 +40,10 @@ extension FileSystemNode {
     }
     
     func getNode(by path: String) -> FileSystemNode? {
-        guard path != "" else { return self }
         let tokens = path.tokenize()
-        guard let token = tokens.first else { return self }
-        
-        let next = tokens.dropFirst().joined(separator: .slash)
-        
         var pointer: FileSystemNode? = self
+        
+        guard !path.isEmpty, let token = tokens.first else { return self }
         
         switch token {
         case .empty:
@@ -56,11 +53,12 @@ extension FileSystemNode {
         case .dot:
             pointer = self
         case .doubleDot:
-            pointer = parent == nil ? self : parent
+            pointer = parent ?? self
         default:
             pointer = hasNode(name: token)
         }
         
+        let next = tokens.dropFirst().joined(separator: .slash)
         return pointer?.getNode(by: next)
     }
 }
