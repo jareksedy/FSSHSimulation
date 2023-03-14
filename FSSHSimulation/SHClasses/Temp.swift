@@ -2,7 +2,7 @@
 //  Temp.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 13.03.2023.
+//  Created by Yaroslav Sedyshev on 13.03.2023.
 //
 
 final class Temp: AbstractCommand {
