@@ -20,6 +20,6 @@ extension CommandProtocol {
     }
     
     var commandName: String {
-        return String(describing: self).components(separatedBy: ".").last?.lowercased() ?? ""
+        return String(describing: self).components(separatedBy: ".").last?.lowercased() ?? .empty
     }
 }
