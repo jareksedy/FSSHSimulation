@@ -6,10 +6,6 @@
 //
 
 protocol Node: AnyObject {
-    var root: Node? { get }
-    var home: Node? { get }
-    var path: String { get }
-    
     var parent: Directory? { get set }
     var name: String { get set }
     

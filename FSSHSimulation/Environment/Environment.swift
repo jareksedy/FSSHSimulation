@@ -14,6 +14,10 @@ class Environment {
     var currentDirectory: Directory
     var isRunning = true
     
+    var prompt: String {
+        .promptTemplate.format(userName, hostName, currentDirectory.name == .empty ? .slash : currentDirectory.name, .dollarSign)
+    }
+    
     static let shared = Environment()
     
     private init() {
@@ -24,9 +28,5 @@ class Environment {
         rootDirectory.add(node: homeDirectory)
         
         self.currentDirectory = userDirectory
-    }
-    
-    var prompt: String {
-        .promptTemplate.format(userName, hostName, currentDirectory.name == .empty ? .slash : currentDirectory.name, .dollarSign)
     }
 }

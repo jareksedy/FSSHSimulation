@@ -9,39 +9,39 @@ import Foundation
 
 extension String {    
     func condenseWhitespace() -> String {
-        let components = self.components(separatedBy: .whitespacesAndNewlines)
+        let components = components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
     }
     
     func strip() -> String {
-        return self.trimmingCharacters(in: .whitespaces).condenseWhitespace().filterAllowedCharacters()
+        trimmingCharacters(in: .whitespaces).condenseWhitespace().filterAllowedCharacters()
     }
     
     func toCommand() -> String? {
-        return self.components(separatedBy: " ").first?.lowercased()
+        components(separatedBy: " ").first?.lowercased()
     }
     
     func toArguments() -> [String] {
-        return Array(self.components(separatedBy: " ").dropFirst())
+        Array(components(separatedBy: " ").dropFirst())
     }
     
     func tokenize() -> [String] {
-        return self.components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
+        components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
     }
     
     func toClass() -> CommandProtocol.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
-        return Bundle.main.classNamed("\(moduleName).\(self.capitalized)") as? CommandProtocol.Type
+        return Bundle.main.classNamed("\(moduleName).\(capitalized)") as? CommandProtocol.Type
     }
     
     func format(_ args: CVarArg...) -> String {
-        return String(format: self, arguments: args)
+        String(format: self, arguments: args)
     }
     
     func filterAllowedCharacters() -> String {
         let alphanumerics = CharacterSet.alphanumerics
         let other = CharacterSet(charactersIn: .empty + .whitespace + .slash + .dot + .doubleDot + .tilde)
         let allowedCharacterSet = alphanumerics.union(other)
-        return String(self.unicodeScalars.filter { allowedCharacterSet.contains($0) })
+        return String(unicodeScalars.filter { allowedCharacterSet.contains($0) })
     }
 }

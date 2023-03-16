@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */; };
-		CA2A3CA229C37FD8006DFCED /* CVarArg+DollarSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA129C37FD8006DFCED /* CVarArg+DollarSign.swift */; };
+		CA2A3CA229C37FD8006DFCED /* CVarArg+dollarSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpecialCharacters.swift"; sourceTree = "<group>"; };
-		CA2A3CA129C37FD8006DFCED /* CVarArg+DollarSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVarArg+DollarSign.swift"; sourceTree = "<group>"; };
+		CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVarArg+dollarSign.swift"; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		CAE9A3AB29BC640700FBAAF8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CA2A3CA129C37FD8006DFCED /* CVarArg+DollarSign.swift */,
+				CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */,
 				CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */,
 				CAE9A3A929BC640200FBAAF8 /* String+Helpers.swift */,
 			);
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA2A3CA229C37FD8006DFCED /* CVarArg+DollarSign.swift in Sources */,
+				CA2A3CA229C37FD8006DFCED /* CVarArg+dollarSign.swift in Sources */,
 				CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */,
 				CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */,
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
