@@ -14,20 +14,20 @@ protocol Node: AnyObject {
 }
 
 extension Node {
-    private var nodes: [Node] {
-        return sequence(first: self, next: { $0.parent }).reversed()
+    var nodes: [Node] {
+        sequence(first: self, next: { $0.parent }).reversed()
     }
     
     var root: Node? {
-        return nodes.first
+        nodes.first
     }
     
     var home: Node? {
-        return getNode(by: .homeDirectory)
+        getNode(by: .homeDirectory)
     }
     
     var path: String {
-        return nodes.count == 1 ? .slash : nodes.map { $0.name }.joined(separator: .slash)
+        nodes.count == 1 ? .slash : nodes.map { $0.name }.joined(separator: .slash)
     }
     
     func getNode(by path: String) -> Node? {
