@@ -8,8 +8,7 @@
 let environment = Environment.shared
 
 while environment.isRunning {
-    let prompt = "[\(environment.userName)@\(environment.hostName) \(environment.currentDirectory.directoryName)] \(environment.promptChar)"
-    print(prompt, terminator: " ")
+    print(environment.prompt, terminator: " ")
     
     if let input = readLine()?.strip(), let command = input.toCommand(), !command.isEmpty {
         if let commandInstance = command.toClass()?.init() {

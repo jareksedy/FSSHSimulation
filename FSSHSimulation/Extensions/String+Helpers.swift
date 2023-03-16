@@ -1,5 +1,5 @@
 //
-//  String+condenseWhitespace.swift
+//  String+Helpers.swift
 //  FSSHSimulation
 //
 //  Created by Yaroslav Sedyshev on 11.03.2023.
@@ -7,14 +7,7 @@
 
 import Foundation
 
-extension String {
-    static var empty: String { "" }
-    static var whitespace: String { " " }
-    static var slash: String { "/" }
-    static var dot: String { "." }
-    static var doubleDot: String { ".." }
-    static var tilde: String { "~" }
-    
+extension String {    
     func condenseWhitespace() -> String {
         let components = self.components(separatedBy: .whitespacesAndNewlines)
         return components.filter { !$0.isEmpty }.joined(separator: " ")

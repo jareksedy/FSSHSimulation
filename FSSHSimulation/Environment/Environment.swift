@@ -8,7 +8,6 @@
 class Environment {
     let rootDirectory = Directory(name: "")
     
-    let promptChar = "$"
     let userName = "root"
     let hostName = "localhost"
     
@@ -25,5 +24,9 @@ class Environment {
         rootDirectory.add(node: homeDirectory)
         
         self.currentDirectory = userDirectory
+    }
+    
+    var prompt: String {
+        .promptTemplate.format(userName, hostName, currentDirectory.name == .empty ? .slash : currentDirectory.name, .dollarSign)
     }
 }
