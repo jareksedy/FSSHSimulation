@@ -7,6 +7,13 @@
 
 final class Find: CommandProtocol {
     func run(arguments: [String]) {
-        print("This is a stub!")
+        find(node: environment.currentDirectory)
+    }
+    
+    private func find(node: Directory?) {
+        print(node?.path ?? .empty)
+        node?.nodes.forEach { node in
+            find(node: node as? Directory)
+        }
     }
 }

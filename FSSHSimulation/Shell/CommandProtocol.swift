@@ -15,6 +15,10 @@ extension CommandProtocol {
         return Environment.shared
     }
     
+    var rootDirectory: Directory {
+        return environment.rootDirectory
+    }
+    
     var currentDirectory: Directory {
         return environment.currentDirectory
     }
