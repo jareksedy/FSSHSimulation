@@ -5,7 +5,7 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
-class Environment {
+final class Environment {
     let rootDirectory = Directory(name: "")
     
     let userName = "root"

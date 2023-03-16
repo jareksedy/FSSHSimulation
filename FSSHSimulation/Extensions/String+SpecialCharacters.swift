@@ -2,7 +2,7 @@
 //  String+SpecialCharacters.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 16.03.2023.
+//  Created by Yaroslav Sedyshev on 16.03.2023.
 //
 
 extension String {

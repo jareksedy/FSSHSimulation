@@ -10,17 +10,17 @@ class Chdir: CommandProtocol {
     
     func run(arguments: [String]) {
         guard let path = arguments.first else {
-            print(Strings.Messages.usageDirectoryName.format(commandName))
+            print(Messages.usageDirectoryName.format(commandName))
             return
         }
         
         guard arguments.count == 1 else {
-            print(Strings.Messages.tooManyArguments.format(commandName))
+            print(Messages.tooManyArguments.format(commandName))
             return
         }
         
         guard let directory = currentDirectory.getNode(by: path) as? Directory else {
-            print(Strings.Messages.noSuchFileOrDirectory.format(commandName, path))
+            print(Messages.noSuchFileOrDirectory.format(commandName, path))
             return
         }
         

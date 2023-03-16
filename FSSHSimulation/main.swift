@@ -11,10 +11,10 @@ while environment.isRunning {
     print(environment.prompt, terminator: " ")
     
     if let input = readLine()?.strip(), let command = input.toCommand(), !command.isEmpty {
-        if let commandInstance = command.toClass()?.init() {
-            commandInstance.run(arguments: input.toArguments())
+        if let instance = command.toClass()?.init() {
+            instance.run(arguments: input.toArguments())
         } else {
-            print(Strings.Messages.commandNotFound.format(command))
+            print(Messages.commandNotFound.format(command))
         }
     }
 }

@@ -12,18 +12,18 @@ protocol CommandProtocol {
 
 extension CommandProtocol {
     var environment: Environment {
-        return Environment.shared
+        Environment.shared
     }
     
     var rootDirectory: Directory {
-        return environment.rootDirectory
+        environment.rootDirectory
     }
     
     var currentDirectory: Directory {
-        return environment.currentDirectory
+        environment.currentDirectory
     }
     
     var commandName: String {
-        return String(describing: self).components(separatedBy: ".").last?.lowercased() ?? .empty
+        String(describing: self).components(separatedBy: ".").last?.lowercased() ?? .empty
     }
 }

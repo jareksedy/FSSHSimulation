@@ -5,11 +5,11 @@
 //  Created by Yaroslav Sedyshev on 11.03.2023.
 //
 
-final class Directory: Node {
+final class Directory: DirectoryProtocol {
     weak var parent: Directory?
     var name: String
     
-    private(set) var nodes: [Node] = []
+    internal var nodes: [Node] = []
     
     init(name: String) {
         self.name = name
@@ -35,9 +35,5 @@ final class Directory: Node {
             node.parent = nil
             self.nodes.removeAll(where: { $0 === node })
         }
-    }
-    
-    func hasNode(name: String) -> Node? {
-        return nodes.first(where: { $0.name == name })
     }
 }
