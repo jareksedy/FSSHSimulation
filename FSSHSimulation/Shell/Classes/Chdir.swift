@@ -6,8 +6,6 @@
 //
 
 class Chdir: CommandProtocol {
-    required init() {}
-    
     func main(arguments: [String]) {
         guard let path = arguments.first else {
             print(Messages.usageDirectoryName.format(commandName))
@@ -26,4 +24,6 @@ class Chdir: CommandProtocol {
         
         environment.currentDirectory = directory
     }
+    
+    required init() {}
 }

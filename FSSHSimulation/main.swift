@@ -10,11 +10,11 @@ let environment = Environment.shared
 while environment.isRunning {
     print(environment.prompt, terminator: " ")
     
-    if let input = readLine()?.strip(), let command = input.toCommand(), !command.isEmpty {
-        if let instance = command.toClass()?.init() {
-            instance.main(arguments: input.toArguments())
+    if let input = readLine()?.strip(), let commandName = input.toCommand(), !commandName.isEmpty {
+        if let command = commandName.toClass()?.init() {
+            command.main(arguments: input.toArguments())
         } else {
-            print(Messages.commandNotFound.format(command))
+            print(Messages.commandNotFound.format(commandName))
         }
     }
 }
