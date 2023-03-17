@@ -68,6 +68,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2A3CA529C49F01006DFCED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CADBA01B29C0D75600F4A1C0 /* Node.swift */,
+				CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CA2A3CA629C49F0A006DFCED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CAE9A39429BC466900FBAAF8 /* Directory.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CA2A3CA729C49F19006DFCED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CA2A3CA829C49F21006DFCED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
+				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
+				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
+				CA6B186929BD996000A44F5F /* Chdir.swift */,
+				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
+				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		CA6B186429BD82BF00A44F5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +146,8 @@
 		CAE9A39329BC3E9400FBAAF8 /* FileSystem */ = {
 			isa = PBXGroup;
 			children = (
-				CADBA01B29C0D75600F4A1C0 /* Node.swift */,
-				CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */,
-				CAE9A39429BC466900FBAAF8 /* Directory.swift */,
+				CA2A3CA529C49F01006DFCED /* Protocols */,
+				CA2A3CA629C49F0A006DFCED /* Classes */,
 			);
 			path = FileSystem;
 			sourceTree = "<group>";
@@ -136,13 +173,8 @@
 		CAE9A3B029BC6ABE00FBAAF8 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */,
-				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
-				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
-				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
-				CA6B186929BD996000A44F5F /* Chdir.swift */,
-				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
-				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
+				CA2A3CA729C49F19006DFCED /* Protocols */,
+				CA2A3CA829C49F21006DFCED /* Classes */,
 			);
 			path = Shell;
 			sourceTree = "<group>";

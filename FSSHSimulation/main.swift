@@ -12,7 +12,7 @@ while environment.isRunning {
     
     if let input = readLine()?.strip(), let command = input.toCommand(), !command.isEmpty {
         if let instance = command.toClass()?.init() {
-            instance.run(arguments: input.toArguments())
+            instance.main(arguments: input.toArguments())
         } else {
             print(Messages.commandNotFound.format(command))
         }

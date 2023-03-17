@@ -6,7 +6,7 @@
 //
 
 final class Find: CommandProtocol {
-    func run(arguments: [String]) {
+    func main(arguments: [String]) {
         find(node: currentDirectory)
     }
     

@@ -8,7 +8,7 @@
 class Chdir: CommandProtocol {
     required init() {}
     
-    func run(arguments: [String]) {
+    func main(arguments: [String]) {
         guard let path = arguments.first else {
             print(Messages.usageDirectoryName.format(commandName))
             return

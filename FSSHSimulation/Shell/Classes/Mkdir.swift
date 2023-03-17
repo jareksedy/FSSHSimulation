@@ -6,7 +6,7 @@
 //
 
 final class Mkdir: CommandProtocol {
-    func run(arguments: [String]) {
+    func main(arguments: [String]) {
         guard !arguments.isEmpty else {
             print(Messages.usageDirectoryName.format(commandName))
             return
