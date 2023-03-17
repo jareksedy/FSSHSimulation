@@ -15,25 +15,19 @@ final class Directory: DirectoryProtocol {
         self.name = name
     }
     
-    func add(node: Node) {
-        add(nodes: [node])
+    @discardableResult func add(node: Node) -> Bool {
+        guard hasNode(name: node.name) == nil else { return false }
+        
+        node.parent = self
+        self.nodes.append(node)
+        return true
     }
     
-    func add(nodes: [Node]) {
-        nodes.forEach { node in
-            node.parent = self
-            self.nodes.append(node)
-        }
-    }
-    
-    func remove(node: Node) {
-        remove(nodes: [node])
-    }
-    
-    func remove(nodes: [Node]) {
-        nodes.forEach { node in
-            node.parent = nil
-            self.nodes.removeAll(where: { $0 === node })
-        }
+    @discardableResult func remove(node: Node) -> Bool {
+        guard hasNode(name: node.name) != nil else { return false }
+        
+        node.parent = nil
+        self.nodes.removeAll(where: { $0 === node })
+        return true
     }
 }

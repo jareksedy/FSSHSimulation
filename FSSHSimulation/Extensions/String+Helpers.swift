@@ -29,6 +29,19 @@ extension String {
         components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
     }
     
+    func stripPath() -> String? {
+        tokenize().last
+    }
+    
+    func stripFilename() -> String? {
+        tokenize().dropLast().joined(separator: .slash)
+    }
+    
+    func isPath() -> Bool {
+        let pathCharacters: [String] = [.slash, .dot, .doubleDot, .tilde]
+        return !pathCharacters.filter { self.contains($0) }.isEmpty
+    }
+    
     func toClass() -> CommandProtocol.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
         return Bundle.main.classNamed("\(moduleName).\(capitalized)") as? CommandProtocol.Type

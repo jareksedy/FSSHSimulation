@@ -10,4 +10,5 @@ enum Messages {
     static let tooManyArguments = "%@: too many arguments"
     static let usageDirectoryName = "usage: %@: directory_name"
     static let noSuchFileOrDirectory = "%@: no such file or directory: %@"
+    static let fileExists = "%@: file exists: %@"
 }

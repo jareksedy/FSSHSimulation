@@ -8,10 +8,8 @@
 protocol DirectoryProtocol: Node {
     var nodes: [Node] { get }
     
-    func add(node: Node)
-    func add(nodes: [Node])
-    func remove(node: Node)
-    func remove(nodes: [Node])
+    @discardableResult func add(node: Node) -> Bool
+    @discardableResult func remove(node: Node) -> Bool
 }
 
 extension DirectoryProtocol {
