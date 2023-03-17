@@ -6,12 +6,17 @@
 //
 
 extension String {
-    static var empty: String { "" }
-    static var whitespace: String { " " }
-    static var slash: String { "/" }
-    static var dot: String { "." }
-    static var doubleDot: String { ".." }
-    static var tilde: String { "~" }
-    static var homeDirectory: String { "/home/root" }
-    static var promptTemplate: String { "[%@@%@ %@] %@" }
+    static var empty = ""
+    static var whitespace = " "
+    
+    static var slash = "/"
+    static var dot = "."
+    static var doubleDot = ".."
+    static var tilde = "~"
+    
+    static var questionMark = "?"
+    static var asterisk = "*"
+    
+    static var homeDirectory = "/home/root"
+    static var promptTemplate = "[%@@%@ %@] %@"
 }

@@ -15,14 +15,6 @@ extension CommandProtocol {
         Environment.shared
     }
     
-    var rootDirectory: Directory {
-        environment.rootDirectory
-    }
-    
-    var currentDirectory: Directory {
-        environment.currentDirectory
-    }
-    
     var commandName: String {
         String(describing: self).components(separatedBy: ".").last?.lowercased() ?? .empty
     }
