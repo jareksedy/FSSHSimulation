@@ -12,7 +12,6 @@ extension String {
     static var dot: String { "." }
     static var doubleDot: String { ".." }
     static var tilde: String { "~" }
-    
     static var homeDirectory: String { "/home/root" }
     static var promptTemplate: String { "[%@@%@ %@] %@" }
 }
