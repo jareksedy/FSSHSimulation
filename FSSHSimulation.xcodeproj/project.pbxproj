@@ -26,6 +26,8 @@
 		CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
 		CA2A3CC329C5799E006DFCED /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AC29BC66D500FBAAF8 /* Messages.swift */; };
+		CA2A3CC529C5A772006DFCED /* Rmdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CC429C5A772006DFCED /* Rmdir.swift */; };
+		CA3CADE429C61E2A00B51555 /* Rmdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CC429C5A772006DFCED /* Rmdir.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -59,6 +61,7 @@
 		CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryProtocol.swift; sourceTree = "<group>"; };
 		CA2A3CAD29C578CC006DFCED /* FSSHSimulationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSSHSimulationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2A3CAF29C578CC006DFCED /* FSSHSimulationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSSHSimulationTests.swift; sourceTree = "<group>"; };
+		CA2A3CC429C5A772006DFCED /* Rmdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rmdir.swift; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			children = (
 				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
 				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
+				CA2A3CC429C5A772006DFCED /* Rmdir.swift */,
 				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
 				CA6B186929BD996000A44F5F /* Chdir.swift */,
 				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
@@ -315,6 +319,7 @@
 				CA2A3CBE29C5799B006DFCED /* Cd.swift in Sources */,
 				CA2A3CBA29C5798E006DFCED /* Node.swift in Sources */,
 				CA2A3CBB29C57991006DFCED /* Directory.swift in Sources */,
+				CA3CADE429C61E2A00B51555 /* Rmdir.swift in Sources */,
 				CA2A3CBC29C57994006DFCED /* CommandProtocol.swift in Sources */,
 				CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */,
 				CA2A3CBF29C5799B006DFCED /* Find.swift in Sources */,
@@ -338,6 +343,7 @@
 				CA2A3CA429C38701006DFCED /* DirectoryProtocol.swift in Sources */,
 				CAE9A3AF29BC6ABB00FBAAF8 /* CommandProtocol.swift in Sources */,
 				CA6B186E29BDCBD600A44F5F /* Cd.swift in Sources */,
+				CA2A3CC529C5A772006DFCED /* Rmdir.swift in Sources */,
 				CAE9A3AA29BC640200FBAAF8 /* String+Helpers.swift in Sources */,
 				CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */,
 				CA6B186C29BDAFF600A44F5F /* Pwd.swift in Sources */,

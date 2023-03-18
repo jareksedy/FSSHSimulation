@@ -67,4 +67,20 @@ final class FSSHSimulationTests: XCTestCase {
         
         XCTAssert(environment.rootDirectory.nodes.count == 10_002)
     }
+    
+    func testRmdir() throws {
+        let mkdirCommand = Mkdir()
+        let chdirCommand = Chdir()
+        let rmdirCommand = Rmdir()
+        
+        chdirCommand.main(arguments: ["~"])
+        XCTAssert(environment.currentDirectory.path == "/home/root")
+        
+        mkdirCommand.main(arguments: ["~/temp"])
+        
+//        for i in 0 ... 9_999 {
+//            chdirCommand.main(arguments: ["test\(i)"])
+//            XCTAssert(environment.currentDirectory.name == "test\(i)")
+//        }
+    }
 }

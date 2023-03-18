@@ -12,4 +12,5 @@ enum Messages {
     static let noSuchFileOrDirectory = "%@: no such file or directory: %@"
     static let fileExists = "%@: file exists: %@"
     static let invalidName = "%@: invalid file or directory name: %@"
+    static let directoryNotEmpty = "%@: directory not empty: %@"
 }
