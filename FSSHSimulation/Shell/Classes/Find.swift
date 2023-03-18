@@ -7,13 +7,18 @@
 
 final class Find: CommandProtocol {
     func main(arguments: [String]) {
-        find(node: environment.rootDirectory)
+        arguments.forEach { argument in
+            if let node = environment.currentDirectory.getNode(by: argument) {
+                find(node: node as? DirectoryProtocol)
+            }
+        }
     }
     
-    private func find(node: Directory?) {
+    private func find(node: DirectoryProtocol?) {
         print(node?.path ?? .empty)
+        
         node?.nodes.forEach { node in
-            find(node: node as? Directory)
+            find(node: node as? DirectoryProtocol)
         }
     }
 }

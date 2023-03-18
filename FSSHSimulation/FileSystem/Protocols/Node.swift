@@ -11,7 +11,7 @@ protocol Node: AnyObject {
 }
 
 extension Node {
-    private var nodes: [Node] {
+    var nodes: [Node] {
         sequence(first: self, next: { $0.parent }).reversed()
     }
     
