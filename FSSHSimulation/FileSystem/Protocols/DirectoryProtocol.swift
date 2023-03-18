@@ -26,9 +26,9 @@ extension DirectoryProtocol {
     
     func getNode(by path: String) -> Node? {
         let tokens = path.tokenize()
-        guard !path.isEmpty, let token = tokens.first else { return self }
-        
         var pointer: Node? = self
+        
+        guard !path.isEmpty, let token = tokens.first else { return self }
         
         switch token {
         case .empty: pointer = root

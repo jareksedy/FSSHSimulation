@@ -14,7 +14,7 @@ extension String {
     }
     
     func strip() -> String {
-        trimmingCharacters(in: .whitespaces).condenseWhitespace()//.filterAllowedCharacters()
+        trimmingCharacters(in: .whitespaces).condenseWhitespace()
     }
     
     func toCommand() -> String? {
@@ -49,12 +49,5 @@ extension String {
     
     func format(_ args: CVarArg...) -> String {
         String(format: self, arguments: args)
-    }
-    
-    func filterAllowedCharacters() -> String {
-        let alphanumerics = CharacterSet.alphanumerics
-        let other = CharacterSet(charactersIn: .empty + .whitespace + .slash + .dot + .doubleDot + .tilde)
-        let allowedCharacterSet = alphanumerics.union(other)
-        return String(unicodeScalars.filter { allowedCharacterSet.contains($0) })
     }
 }

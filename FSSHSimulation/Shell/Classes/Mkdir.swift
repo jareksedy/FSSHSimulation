@@ -27,8 +27,10 @@ final class Mkdir: CommandProtocol {
     private func mkdir(path: String) {
         guard let targetDirectoryName = path.stripPath(), let parentDirectoryName = path.stripFilename() else { return }
         
-        guard let targetDirectory = environment.currentDirectory.getNode(by: parentDirectoryName) as? DirectoryProtocol else {
-            print(Messages.noSuchFileOrDirectory.format(commandName, targetDirectoryName.stripPath() ?? .empty))
+        let startDirectory = parentDirectoryName == .empty ? environment.rootDirectory : environment.currentDirectory
+        
+        guard let targetDirectory = startDirectory.getNode(by: parentDirectoryName) as? DirectoryProtocol else {
+            print(Messages.noSuchFileOrDirectory.format(commandName, path))
             return
         }
         
