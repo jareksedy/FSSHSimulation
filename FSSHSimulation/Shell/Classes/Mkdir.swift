@@ -18,9 +18,7 @@ final class Mkdir: CommandProtocol {
     }
     
     private func mkdir(name: String) {
-        let directory = Directory(name: name)
-        
-        guard environment.currentDirectory.add(node: directory) else {
+        guard environment.currentDirectory.add(node: Directory(name: name)) else {
             print(Messages.fileExists.format(commandName, name))
             return
         }
@@ -29,14 +27,12 @@ final class Mkdir: CommandProtocol {
     private func mkdir(path: String) {
         guard let targetDirectoryName = path.stripPath(), let parentDirectoryName = path.stripFilename() else { return }
         
-        guard let targetDirectory = environment.rootDirectory.getNode(by: parentDirectoryName) as? DirectoryProtocol else {
+        guard let targetDirectory = environment.currentDirectory.getNode(by: parentDirectoryName) as? DirectoryProtocol else {
             print(Messages.noSuchFileOrDirectory.format(commandName, targetDirectoryName.stripPath() ?? .empty))
             return
         }
         
-        let directory = Directory(name: targetDirectoryName)
-        
-        guard targetDirectory.add(node: directory) else {
+        guard targetDirectory.add(node: Directory(name: targetDirectoryName)) else {
             print(Messages.fileExists.format(commandName, path))
             return
         }

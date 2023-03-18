@@ -14,7 +14,7 @@ extension String {
     }
     
     func strip() -> String {
-        trimmingCharacters(in: .whitespaces).condenseWhitespace().filterAllowedCharacters()
+        trimmingCharacters(in: .whitespaces).condenseWhitespace()//.filterAllowedCharacters()
     }
     
     func toCommand() -> String? {
