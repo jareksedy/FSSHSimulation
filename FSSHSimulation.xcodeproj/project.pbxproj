@@ -10,6 +10,22 @@
 		CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */; };
 		CA2A3CA229C37FD8006DFCED /* CVarArg+dollarSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */; };
 		CA2A3CA429C38701006DFCED /* DirectoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */; };
+		CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CAF29C578CC006DFCED /* FSSHSimulationTests.swift */; };
+		CA2A3CB529C57985006DFCED /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
+		CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */; };
+		CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3A929BC640200FBAAF8 /* String+Helpers.swift */; };
+		CA2A3CB829C5798A006DFCED /* String+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */; };
+		CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */; };
+		CA2A3CBA29C5798E006DFCED /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBA01B29C0D75600F4A1C0 /* Node.swift */; };
+		CA2A3CBB29C57991006DFCED /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A39429BC466900FBAAF8 /* Directory.swift */; };
+		CA2A3CBC29C57994006DFCED /* CommandProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AE29BC6ABB00FBAAF8 /* CommandProtocol.swift */; };
+		CA2A3CBD29C5799B006DFCED /* Pwd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186B29BDAFF600A44F5F /* Pwd.swift */; };
+		CA2A3CBE29C5799B006DFCED /* Cd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186D29BDCBD600A44F5F /* Cd.swift */; };
+		CA2A3CBF29C5799B006DFCED /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3B329BC6BA300FBAAF8 /* Find.swift */; };
+		CA2A3CC029C5799B006DFCED /* Chdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186929BD996000A44F5F /* Chdir.swift */; };
+		CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
+		CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
+		CA2A3CC329C5799E006DFCED /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE9A3AC29BC66D500FBAAF8 /* Messages.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -41,6 +57,8 @@
 		CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVarArg+dollarSign.swift"; sourceTree = "<group>"; };
 		CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryProtocol.swift; sourceTree = "<group>"; };
+		CA2A3CAD29C578CC006DFCED /* FSSHSimulationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSSHSimulationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA2A3CAF29C578CC006DFCED /* FSSHSimulationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSSHSimulationTests.swift; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -58,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA2A3CAA29C578CC006DFCED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAA88A4229BC3CA4002FC112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +131,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		CA2A3CAE29C578CC006DFCED /* FSSHSimulationTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA2A3CAF29C578CC006DFCED /* FSSHSimulationTests.swift */,
+			);
+			path = FSSHSimulationTests;
+			sourceTree = "<group>";
+		};
 		CA6B186429BD82BF00A44F5F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA88A4729BC3CA4002FC112 /* FSSHSimulation */,
+				CA2A3CAE29C578CC006DFCED /* FSSHSimulationTests */,
 				CAA88A4629BC3CA4002FC112 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA88A4529BC3CA4002FC112 /* FSSHSimulation */,
+				CA2A3CAD29C578CC006DFCED /* FSSHSimulationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +217,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA2A3CAC29C578CC006DFCED /* FSSHSimulationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA2A3CB129C578CC006DFCED /* Build configuration list for PBXNativeTarget "FSSHSimulationTests" */;
+			buildPhases = (
+				CA2A3CA929C578CC006DFCED /* Sources */,
+				CA2A3CAA29C578CC006DFCED /* Frameworks */,
+				CA2A3CAB29C578CC006DFCED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSSHSimulationTests;
+			productName = FSSHSimulationTests;
+			productReference = CA2A3CAD29C578CC006DFCED /* FSSHSimulationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CAA88A4429BC3CA4002FC112 /* FSSHSimulation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAA88A4C29BC3CA4002FC112 /* Build configuration list for PBXNativeTarget "FSSHSimulation" */;
@@ -209,6 +261,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					CA2A3CAC29C578CC006DFCED = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					CAA88A4429BC3CA4002FC112 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -228,11 +283,45 @@
 			projectRoot = "";
 			targets = (
 				CAA88A4429BC3CA4002FC112 /* FSSHSimulation */,
+				CA2A3CAC29C578CC006DFCED /* FSSHSimulationTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CA2A3CAB29C578CC006DFCED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		CA2A3CA929C578CC006DFCED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2A3CB829C5798A006DFCED /* String+SpecialCharacters.swift in Sources */,
+				CA2A3CC329C5799E006DFCED /* Messages.swift in Sources */,
+				CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */,
+				CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */,
+				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
+				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
+				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
+				CA2A3CB529C57985006DFCED /* Environment.swift in Sources */,
+				CA2A3CC029C5799B006DFCED /* Chdir.swift in Sources */,
+				CA2A3CBE29C5799B006DFCED /* Cd.swift in Sources */,
+				CA2A3CBA29C5798E006DFCED /* Node.swift in Sources */,
+				CA2A3CBB29C57991006DFCED /* Directory.swift in Sources */,
+				CA2A3CBC29C57994006DFCED /* CommandProtocol.swift in Sources */,
+				CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */,
+				CA2A3CBF29C5799B006DFCED /* Find.swift in Sources */,
+				CA2A3CBD29C5799B006DFCED /* Pwd.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CAA88A4129BC3CA4002FC112 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +348,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		CA2A3CB229C578CC006DFCED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NK62H99X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jareksedy.FSSHSimulationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CA2A3CB329C578CC006DFCED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4NK62H99X6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jareksedy.FSSHSimulationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		CAA88A4A29BC3CA4002FC112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,6 +520,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA2A3CB129C578CC006DFCED /* Build configuration list for PBXNativeTarget "FSSHSimulationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA2A3CB229C578CC006DFCED /* Debug */,
+				CA2A3CB329C578CC006DFCED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CAA88A4029BC3CA4002FC112 /* Build configuration list for PBXProject "FSSHSimulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
