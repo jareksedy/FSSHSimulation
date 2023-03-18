@@ -11,4 +11,5 @@ enum Messages {
     static let usageDirectoryName = "usage: %@: directory_name"
     static let noSuchFileOrDirectory = "%@: no such file or directory: %@"
     static let fileExists = "%@: file exists: %@"
+    static let invalidName = "%@: invalid file or directory name: %@"
 }

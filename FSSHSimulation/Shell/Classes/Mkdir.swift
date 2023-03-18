@@ -18,6 +18,11 @@ final class Mkdir: CommandProtocol {
     }
     
     private func mkdir(name: String) {
+        guard name.isValid() else {
+            print(Messages.invalidName.format(commandName, name))
+            return
+        }
+        
         guard environment.currentDirectory.add(node: Directory(name: name)) else {
             print(Messages.fileExists.format(commandName, name))
             return
@@ -26,6 +31,11 @@ final class Mkdir: CommandProtocol {
     
     private func mkdir(path: String) {
         guard let targetDirectoryName = path.stripPath(), let parentDirectoryName = path.stripFilename() else { return }
+        
+        guard targetDirectoryName.isValid() else {
+            print(Messages.invalidName.format(commandName, targetDirectoryName))
+            return
+        }
         
         let startDirectory = parentDirectoryName == .empty ? environment.rootDirectory : environment.currentDirectory
         

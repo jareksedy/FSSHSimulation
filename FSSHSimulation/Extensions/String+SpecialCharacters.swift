@@ -14,6 +14,8 @@ extension String {
     static var doubleDot = ".."
     static var tilde = "~"
     
+    static var underscore = "_"
+    
     static var questionMark = "?"
     static var asterisk = "*"
     

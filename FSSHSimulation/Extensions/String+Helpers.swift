@@ -50,4 +50,9 @@ extension String {
     func format(_ args: CVarArg...) -> String {
         String(format: self, arguments: args)
     }
+    
+    func isValid() -> Bool {
+        let otherCharacters = CharacterSet(charactersIn: .dot + .underscore)
+        return rangeOfCharacter(from: .alphanumerics.union(otherCharacters).inverted) == nil
+    }
 }
