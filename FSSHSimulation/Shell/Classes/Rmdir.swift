@@ -8,7 +8,7 @@
 final class Rmdir: CommandProtocol {
     func main(arguments: [String]) {
         guard !arguments.isEmpty else {
-            print(Messages.usageDirectoryName.format(commandName))
+            print(Errors.usageDirectoryName.localizedDescription(commandName: commandName))
             return
         }
         
@@ -18,36 +18,24 @@ final class Rmdir: CommandProtocol {
     }
     
     private func rmdir(name: String) {
-        guard let directory = environment.currentDirectory.nodeWithName(name) as? DirectoryProtocol else {
-            print(Messages.noSuchFileOrDirectory.format(commandName, name))
-            return
-        }
+        let directory = environment.currentDirectory.getNode(withName: name) as? DirectoryProtocol
         
-        guard directory.nodes.isEmpty else {
-            print(Messages.directoryNotEmpty.format(commandName, name))
-            return
-        }
-        
-        environment.currentDirectory.remove(node: directory)
+        do { try environment.currentDirectory.remove(node: directory) }
+        catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
+        catch let error { print(error.localizedDescription) }
     }
     
     private func rmdir(path: String) {
-        guard let targetDirectory = environment.currentDirectory.getNodeAtPath(path) as? DirectoryProtocol,
-              let parentDirectory = targetDirectory.parent else {
-            print(Messages.noSuchFileOrDirectory.format(commandName, path))
-            return
-        }
+        let targetDirectory = environment.currentDirectory.getNode(atPath: path) as? DirectoryProtocol
+        let parentDirectory = targetDirectory?.parent
         
-        guard targetDirectory.nodes.isEmpty else {
-            print(Messages.directoryNotEmpty.format(commandName, path))
-            return
-        }
+        do { try parentDirectory?.remove(node: targetDirectory) }
+        catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
+        catch let error { print(error.localizedDescription) }
         
         if targetDirectory === environment.currentDirectory {
-            environment.currentDirectory = parentDirectory
+            environment.currentDirectory = parentDirectory ?? environment.rootDirectory
         }
-        
-        parentDirectory.remove(node: targetDirectory)
     }
 }
 

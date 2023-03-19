@@ -6,7 +6,7 @@
 //
 
 final class Environment {
-    let rootDirectory = Directory(name: "")
+    let rootDirectory = Directory(name: .empty)
     
     let userName = "root"
     let hostName = "localhost"
@@ -24,8 +24,8 @@ final class Environment {
         let homeDirectory = Directory(name: "home")
         let userDirectory = Directory(name: "root")
 
-        homeDirectory.add(node: userDirectory)
-        rootDirectory.add(node: homeDirectory)
+        try? homeDirectory.add(node: userDirectory)
+        try? rootDirectory.add(node: homeDirectory)
         
         self.currentDirectory = userDirectory
     }

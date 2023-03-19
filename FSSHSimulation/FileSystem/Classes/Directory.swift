@@ -15,21 +15,33 @@ final class Directory: DirectoryProtocol {
         self.name = name
     }
     
-    @discardableResult func add(node: Node) -> Bool {
-        guard nodeWithName(node.name) == nil else { return false }
+    func add(node: Node?) throws {
+        guard let node = node else {
+            throw Errors.nodeNotFound
+        }
         
-        self.nodes.append(node)
+        guard node.name.isValid() else {
+            throw Errors.invalidFileName(name: node.name)
+        }
+        
+        guard getNode(withName: node.name) == nil else {
+            throw Errors.nodeExists(name: node.name)
+        }
+        
+        nodes.append(node)
         node.parent = self
-        
-        return true
     }
     
-    @discardableResult func remove(node: Node) -> Bool {
-        guard nodeWithName(node.name) != nil else { return false }
+    func remove(node: Node?) throws {
+        guard let node = node, let index = nodes.firstIndex(where: { $0 === node }) else {
+            throw Errors.nodeNotFound
+        }
         
-        self.nodes.removeAll(where: { $0 === node })
+        guard let directory = node as? DirectoryProtocol, directory.nodes.isEmpty else {
+            throw Errors.nodeNotEmpty(name: node.name)
+        }
+        
+        nodes.remove(at: index)
         node.parent = nil
-        
-        return true
     }
 }

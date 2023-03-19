@@ -13,7 +13,7 @@ final class Find: CommandProtocol {
         }
         
         arguments.forEach { path in
-            if let node = environment.currentDirectory.getNodeAtPath(path) {
+            if let node = environment.currentDirectory.getNode(atPath: path) {
                 find(node: node as? DirectoryProtocol)
             } else {
                 print(Messages.noSuchFileOrDirectory.format(commandName, path))

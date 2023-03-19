@@ -29,11 +29,11 @@ extension String {
         components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
     }
     
-    func stripPath() -> String? {
-        tokenize().last
+    func stripPath() -> String {
+        tokenize().last ?? .empty
     }
     
-    func stripFilename() -> String? {
+    func stripFilename() -> String {
         tokenize().dropLast().joined(separator: .slash)
     }
     
