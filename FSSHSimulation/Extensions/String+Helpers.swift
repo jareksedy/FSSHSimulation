@@ -17,7 +17,7 @@ extension String {
         trimmingCharacters(in: .whitespaces).condenseWhitespace()
     }
     
-    func toCommand() -> String? {
+    func toCommandName() -> String? {
         components(separatedBy: " ").first?.lowercased()
     }
     

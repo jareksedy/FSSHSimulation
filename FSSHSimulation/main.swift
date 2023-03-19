@@ -10,7 +10,7 @@ let environment = Environment.shared
 while environment.isRunning {
     print(environment.prompt, terminator: " ")
     
-    if let input = readLine()?.strip(), let commandName = input.toCommand(), !commandName.isEmpty {
+    if let input = readLine()?.strip(), let commandName = input.toCommandName(), !commandName.isEmpty {
         if let command = commandName.toClass()?.init() {
             command.main(arguments: input.toArguments())
         } else {
