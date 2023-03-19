@@ -16,16 +16,20 @@ final class Directory: DirectoryProtocol {
     }
     
     @discardableResult func add(node: Node) -> Bool {
-        guard hasNode(name: node.name) == nil else { return false }
+        guard nodeWithName(node.name) == nil else { return false }
+        
         self.nodes.append(node)
         node.parent = self
+        
         return true
     }
     
     @discardableResult func remove(node: Node) -> Bool {
-        guard hasNode(name: node.name) != nil else { return false }
+        guard nodeWithName(node.name) != nil else { return false }
+        
         self.nodes.removeAll(where: { $0 === node })
         node.parent = nil
+        
         return true
     }
 }

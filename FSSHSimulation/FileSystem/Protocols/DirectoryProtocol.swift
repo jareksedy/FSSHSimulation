@@ -8,8 +8,8 @@
 protocol DirectoryProtocol: Node {
     var nodes: [Node] { get }
     
-    func hasNode(name: String) -> Node?
-    func getNode(by path: String) -> Node?
+    func nodeWithName(_ name: String) -> Node?
+    func getNodeAtPath(_ path: String) -> Node?
     
     @discardableResult func add(node: Node) -> Bool
     @discardableResult func remove(node: Node) -> Bool
@@ -17,14 +17,14 @@ protocol DirectoryProtocol: Node {
 
 extension DirectoryProtocol {
     var home: Node? {
-        getNode(by: .homeDirectory)
+        getNodeAtPath(.homeDirectory)
     }
     
-    func hasNode(name: String) -> Node? {
+    func nodeWithName(_ name: String) -> Node? {
         nodes.first(where: { $0.name == name })
     }
     
-    func getNode(by path: String) -> Node? {
+    func getNodeAtPath(_ path: String) -> Node? {
         let tokens = path.tokenize()
         var pointer: Node? = self
         
@@ -35,10 +35,10 @@ extension DirectoryProtocol {
         case .tilde: pointer = home
         case .dot: pointer = self
         case .doubleDot: pointer = parent ?? self
-        default: pointer = hasNode(name: token)
+        default: pointer = nodeWithName(token)
         }
         
         let pathNext = tokens.dropFirst().joined(separator: .slash)
-        return (pointer as? DirectoryProtocol)?.getNode(by: pathNext)
+        return (pointer as? DirectoryProtocol)?.getNodeAtPath(pathNext)
     }
 }

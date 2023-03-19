@@ -18,7 +18,7 @@ final class Rmdir: CommandProtocol {
     }
     
     private func rmdir(name: String) {
-        guard let directory = environment.currentDirectory.hasNode(name: name) as? DirectoryProtocol else {
+        guard let directory = environment.currentDirectory.nodeWithName(name) as? DirectoryProtocol else {
             print(Messages.noSuchFileOrDirectory.format(commandName, name))
             return
         }
@@ -32,7 +32,7 @@ final class Rmdir: CommandProtocol {
     }
     
     private func rmdir(path: String) {
-        guard let targetDirectory = environment.currentDirectory.getNode(by: path) as? DirectoryProtocol,
+        guard let targetDirectory = environment.currentDirectory.getNodeAtPath(path) as? DirectoryProtocol,
               let parentDirectory = targetDirectory.parent else {
             print(Messages.noSuchFileOrDirectory.format(commandName, path))
             return

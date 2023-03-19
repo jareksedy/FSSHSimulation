@@ -17,7 +17,7 @@ class Chdir: CommandProtocol {
             return
         }
         
-        guard let directory = environment.currentDirectory.getNode(by: path) as? Directory else {
+        guard let directory = environment.currentDirectory.getNodeAtPath(path) as? Directory else {
             print(Messages.noSuchFileOrDirectory.format(commandName, path))
             return
         }
