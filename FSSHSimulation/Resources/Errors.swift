@@ -2,7 +2,7 @@
 //  Errors.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 19.03.2023.
+//  Created by Yaroslav Sedyshev on 19.03.2023.
 //
 
 enum Errors: Error {

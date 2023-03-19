@@ -10,7 +10,7 @@ import Foundation
 extension String {    
     func condenseWhitespace() -> String {
         let components = components(separatedBy: .whitespacesAndNewlines)
-        return components.filter { !$0.isEmpty }.joined(separator: " ")
+        return components.filter { !$0.isEmpty }.joined(separator: .whitespace)
     }
     
     func strip() -> String {
@@ -18,15 +18,15 @@ extension String {
     }
     
     func toCommandName() -> String? {
-        components(separatedBy: " ").first?.lowercased()
+        components(separatedBy: .whitespace).first?.lowercased()
     }
     
     func toArguments() -> [String] {
-        Array(components(separatedBy: " ").dropFirst())
+        Array(components(separatedBy: .whitespace).dropFirst())
     }
     
     func tokenize() -> [String] {
-        components(separatedBy: "/").enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
+        components(separatedBy: .slash).enumerated().filter { index, element in index == 0 || !element.isEmpty }.map { $0.element }
     }
     
     func stripPath() -> String {
