@@ -6,7 +6,7 @@
 //
 
 protocol CommandProtocol {
-    func main(arguments: [String])
+    func main(arguments: [String]) throws
     init()
 }
 

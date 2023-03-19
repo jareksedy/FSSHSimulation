@@ -6,10 +6,9 @@
 //
 
 final class Exit: CommandProtocol {
-    func main(arguments: [String]) {
+    func main(arguments: [String]) throws {
         guard arguments.isEmpty else {
-            print(Messages.tooManyArguments.format(commandName))
-            return
+            throw Errors.tooManyArguments
         }
         
         environment.isRunning = false

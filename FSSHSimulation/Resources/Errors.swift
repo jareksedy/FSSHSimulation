@@ -14,6 +14,8 @@ enum Errors: Error {
     case tooManyArguments
     case usageDirectoryName
     
+    case commandNotFound
+    
     var localizedDescription: String {
         return "Unknown error..."
     }
@@ -32,6 +34,8 @@ enum Errors: Error {
             return "usage: %@: directory_name".format(commandName)
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
+        case .commandNotFound:
+            return "command not found: %@".format(commandName)
         }
     }
 }

@@ -12,21 +12,21 @@ final class FSSHSimulationTests: XCTestCase {
 
     func testChdir() throws {
         let chdirCommand = Chdir()
-        chdirCommand.main(arguments: [".."])
+        try? chdirCommand.main(arguments: [".."])
         XCTAssert(environment.currentDirectory.path == "/home")
-        chdirCommand.main(arguments: [".."])
+        try? chdirCommand.main(arguments: [".."])
         XCTAssert(environment.currentDirectory.path == "/")
-        chdirCommand.main(arguments: [".."])
+        try? chdirCommand.main(arguments: [".."])
         XCTAssert(environment.currentDirectory.path == "/")
-        chdirCommand.main(arguments: ["~/.."])
+        try? chdirCommand.main(arguments: ["~/.."])
         XCTAssert(environment.currentDirectory.path == "/home")
-        chdirCommand.main(arguments: ["/.."])
+        try? chdirCommand.main(arguments: ["/.."])
         XCTAssert(environment.currentDirectory.path == "/")
-        chdirCommand.main(arguments: ["/home/root"])
+        try? chdirCommand.main(arguments: ["/home/root"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
-        chdirCommand.main(arguments: ["~/../~/.."])
+        try? chdirCommand.main(arguments: ["~/../~/.."])
         XCTAssert(environment.currentDirectory.path == "/home")
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
     }
     
@@ -34,35 +34,35 @@ final class FSSHSimulationTests: XCTestCase {
         let mkdirCommand = Mkdir()
         let chdirCommand = Chdir()
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
         for i in 0 ... 9_999 {
-            mkdirCommand.main(arguments: ["test\(i)"])
-            chdirCommand.main(arguments: ["test\(i)"])
+            try? mkdirCommand.main(arguments: ["test\(i)"])
+            try? chdirCommand.main(arguments: ["test\(i)"])
             XCTAssert(environment.currentDirectory.name == "test\(i)")
         }
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
-        mkdirCommand.main(arguments: ["/home/root/test0/test1/test2/test3/test4/test5/test6/test7/test8/hello"])
-        chdirCommand.main(arguments: ["/home/root/test0/test1/test2/test3/test4/test5/test6/test7/test8/hello"])
+        try? mkdirCommand.main(arguments: ["/home/root/test0/test1/test2/test3/test4/test5/test6/test7/test8/hello"])
+        try? chdirCommand.main(arguments: ["/home/root/test0/test1/test2/test3/test4/test5/test6/test7/test8/hello"])
         XCTAssert(environment.currentDirectory.name == "hello")
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
-        mkdirCommand.main(arguments: ["/usr"])
-        mkdirCommand.main(arguments: ["../../usr/bin"])
-        chdirCommand.main(arguments: ["/usr/bin"])
+        try? mkdirCommand.main(arguments: ["/usr"])
+        try? mkdirCommand.main(arguments: ["../../usr/bin"])
+        try? chdirCommand.main(arguments: ["/usr/bin"])
         XCTAssert(environment.currentDirectory.name == "bin")
         
-        chdirCommand.main(arguments: ["/"])
+        try? chdirCommand.main(arguments: ["/"])
         XCTAssert(environment.currentDirectory.path == "/")
         
         for i in 0 ... 9_999 {
-            mkdirCommand.main(arguments: ["temp_directory\(i)"])
+            try? mkdirCommand.main(arguments: ["temp_directory\(i)"])
         }
         
         XCTAssert(environment.rootDirectory.nodes.count == 10_002)
@@ -73,20 +73,20 @@ final class FSSHSimulationTests: XCTestCase {
         let chdirCommand = Chdir()
         let rmdirCommand = Rmdir()
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
-        mkdirCommand.main(arguments: ["/temp"])
-        rmdirCommand.main(arguments: ["/temp"])
+        try? mkdirCommand.main(arguments: ["/temp"])
+        try? rmdirCommand.main(arguments: ["/temp"])
         
-        mkdirCommand.main(arguments: ["~/temp"])
+        try? mkdirCommand.main(arguments: ["~/temp"])
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
-        rmdirCommand.main(arguments: ["temp"])
+        try? rmdirCommand.main(arguments: ["temp"])
         
-        chdirCommand.main(arguments: ["~"])
+        try? chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
     }
 }

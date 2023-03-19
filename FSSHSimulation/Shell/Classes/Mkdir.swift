@@ -6,10 +6,9 @@
 //
 
 final class Mkdir: CommandProtocol {
-    func main(arguments: [String]) {
+    func main(arguments: [String]) throws {
         guard !arguments.isEmpty else {
-            print(Errors.usageDirectoryName.localizedDescription(commandName: commandName))
-            return
+            throw Errors.usageDirectoryName
         }
         
         arguments.forEach { argument in
