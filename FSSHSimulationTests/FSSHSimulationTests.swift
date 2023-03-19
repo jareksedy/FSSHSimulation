@@ -76,11 +76,17 @@ final class FSSHSimulationTests: XCTestCase {
         chdirCommand.main(arguments: ["~"])
         XCTAssert(environment.currentDirectory.path == "/home/root")
         
+        mkdirCommand.main(arguments: ["/temp"])
+        rmdirCommand.main(arguments: ["/temp"])
+        
         mkdirCommand.main(arguments: ["~/temp"])
         
-//        for i in 0 ... 9_999 {
-//            chdirCommand.main(arguments: ["test\(i)"])
-//            XCTAssert(environment.currentDirectory.name == "test\(i)")
-//        }
+        chdirCommand.main(arguments: ["~"])
+        XCTAssert(environment.currentDirectory.path == "/home/root")
+        
+        rmdirCommand.main(arguments: ["temp"])
+        
+        chdirCommand.main(arguments: ["~"])
+        XCTAssert(environment.currentDirectory.path == "/home/root")
     }
 }
