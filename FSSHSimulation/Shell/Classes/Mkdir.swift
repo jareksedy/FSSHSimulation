@@ -33,7 +33,7 @@ final class Mkdir: CommandProtocol {
         guard let targetDirectoryName = path.stripPath(), let parentDirectoryName = path.stripFilename() else { return }
         
         guard targetDirectoryName.isValid() else {
-            print(Messages.invalidName.format(commandName, targetDirectoryName))
+            print(Messages.invalidName.format(commandName, path))
             return
         }
         

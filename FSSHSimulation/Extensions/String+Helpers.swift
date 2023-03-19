@@ -38,7 +38,7 @@ extension String {
     }
     
     func isPath() -> Bool {
-        let pathCharacters: [String] = [.slash, .dot, .doubleDot, .tilde]
+        let pathCharacters: [String] = [.slash, .doubleDot, .tilde]
         return !pathCharacters.filter { self.contains($0) }.isEmpty
     }
     
@@ -52,6 +52,7 @@ extension String {
     }
     
     func isValid() -> Bool {
+        guard self != .empty else { return false }
         let otherCharacters = CharacterSet(charactersIn: .dot + .underscore)
         return rangeOfCharacter(from: .alphanumerics.union(otherCharacters).inverted) == nil
     }
