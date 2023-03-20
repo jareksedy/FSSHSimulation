@@ -12,21 +12,14 @@ final class Mkdir: CommandProtocol {
         }
         
         arguments.forEach { argument in
-            argument.isPath() ? mkdir(path: argument) : mkdir(name: argument)
+            mkdir(path: argument)
         }
-    }
-    
-    private func mkdir(name: String) {
-        do { try environment.currentDirectory.add(node: Directory(name: name)) }
-        catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
-        catch let error { print(error.localizedDescription) }
     }
     
     private func mkdir(path: String) {
         let targetDirectoryName = path.stripPath()
         let parentDirectoryName = path.stripFilename()
-        let startDirectory = parentDirectoryName == .empty ? environment.rootDirectory : environment.currentDirectory
-        let targetDirectory = startDirectory.getNode(atPath: parentDirectoryName) as? DirectoryProtocol
+        let targetDirectory = environment.currentDirectory.getNode(atPath: parentDirectoryName) as? DirectoryProtocol
         
         do { try targetDirectory?.add(node: Directory(name: targetDirectoryName)) }
         catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }

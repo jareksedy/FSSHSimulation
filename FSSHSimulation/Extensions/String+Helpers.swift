@@ -34,13 +34,13 @@ extension String {
     }
     
     func stripFilename() -> String {
-        tokenize().dropLast().joined(separator: .slash)
+        tokenize().map { $0 == .empty ? .slash : $0 }.dropLast().joined(separator: .slash).replacingOccurrences(of: "//", with: "/")
     }
     
-    func isPath() -> Bool {
-        let pathCharacters: [String] = [.slash, .doubleDot, .tilde]
-        return !pathCharacters.filter { self.contains($0) }.isEmpty
-    }
+//    func isPath() -> Bool {
+//        let pathCharacters: [String] = [.slash, .doubleDot, .tilde]
+//        return !pathCharacters.filter { self.contains($0) }.isEmpty
+//    }
     
     func toClass() -> CommandProtocol.Type? {
         guard let moduleName = String(reflecting: Environment.self).split(separator: ".").first else { return nil }
