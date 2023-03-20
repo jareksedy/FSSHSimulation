@@ -12,20 +12,24 @@ final class Rmdir: CommandProtocol {
         }
         
         arguments.forEach { argument in
-            rmdir(path: argument)
+            do { try rmdir(path: argument) }
+            catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
+            catch let error { print(error.localizedDescription) }
         }
     }
     
-    private func rmdir(path: String) {
-        let targetDirectory = environment.currentDirectory.getNode(atPath: path) as? DirectoryProtocol
-        let parentDirectory = targetDirectory?.parent
+    private func rmdir(path: String) throws {
+        guard let targetDirectory = environment.currentDirectory.getNode(atPath: path) as? DirectoryProtocol,
+              let parentDirectory = targetDirectory.parent else {
+            throw Errors.nodeNotFound
+        }
         
-        do { try parentDirectory?.remove(node: targetDirectory) }
+        do { try parentDirectory.remove(node: targetDirectory) }
         catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
         catch let error { print(error.localizedDescription) }
         
         if targetDirectory === environment.currentDirectory {
-            environment.currentDirectory = parentDirectory ?? environment.rootDirectory
+            environment.currentDirectory = parentDirectory
         }
     }
 }
