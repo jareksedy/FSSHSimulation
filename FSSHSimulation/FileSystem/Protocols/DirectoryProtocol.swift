@@ -11,8 +11,8 @@ protocol DirectoryProtocol: Node {
     func getNode(withName name: String) -> Node?
     func getNode(atPath path: String) -> Node?
     
-    func add(node: Node?) throws
-    func remove(node: Node?) throws
+    func add(node: Node) throws
+    func remove(node: Node) throws
 }
 
 extension DirectoryProtocol {

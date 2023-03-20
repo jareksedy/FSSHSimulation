@@ -21,7 +21,7 @@ final class Rmdir: CommandProtocol {
     private func rmdir(path: String) throws {
         guard let targetDirectory = environment.currentDirectory.getNode(atPath: path) as? DirectoryProtocol,
               let parentDirectory = targetDirectory.parent else {
-            throw Errors.nodeNotFound
+            throw Errors.nodeNotFound(name: path)
         }
         
         do { try parentDirectory.remove(node: targetDirectory) }

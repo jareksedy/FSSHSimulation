@@ -7,7 +7,7 @@
 
 enum Errors: Error {
     case nodeExists(name: String)
-    case nodeNotFound
+    case nodeNotFound(name: String)
     case nodeNotEmpty(name: String)
     case invalidFileName(name: String)
     
@@ -24,8 +24,8 @@ enum Errors: Error {
         switch self {
         case .nodeExists(let name):
             return "%@: file exists: %@".format(commandName, name)
-        case .nodeNotFound:
-            return "%@: no such file or directory".format(commandName)
+        case .nodeNotFound(let name):
+            return "%@: no such file or directory: %@".format(commandName, name)
         case .nodeNotEmpty(name: let name):
             return "%@: directory not empty: %@".format(commandName, name)
         case .tooManyArguments:

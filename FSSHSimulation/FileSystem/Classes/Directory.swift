@@ -15,11 +15,7 @@ final class Directory: DirectoryProtocol {
         self.name = name
     }
     
-    func add(node: Node?) throws {
-        guard let node = node else {
-            throw Errors.nodeNotFound
-        }
-        
+    func add(node: Node) throws {
         guard node.name.isValid() else {
             throw Errors.invalidFileName(name: node.name)
         }
@@ -32,9 +28,9 @@ final class Directory: DirectoryProtocol {
         node.parent = self
     }
     
-    func remove(node: Node?) throws {
-        guard let node = node, let index = nodes.firstIndex(where: { $0 === node }) else {
-            throw Errors.nodeNotFound
+    func remove(node: Node) throws {
+        guard let index = nodes.firstIndex(where: { $0 === node }) else {
+            throw Errors.nodeNotFound(name: node.name)
         }
         
         guard let directory = node as? DirectoryProtocol, directory.nodes.isEmpty else {

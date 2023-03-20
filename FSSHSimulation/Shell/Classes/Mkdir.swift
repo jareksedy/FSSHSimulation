@@ -23,7 +23,7 @@ final class Mkdir: CommandProtocol {
         let parentDirectoryName = path.stripFilename()
         
         guard let targetDirectory = environment.currentDirectory.getNode(atPath: parentDirectoryName) as? DirectoryProtocol else {
-            throw Errors.nodeNotFound
+            throw Errors.nodeNotFound(name: path)
         }
         
         do { try targetDirectory.add(node: Directory(name: targetDirectoryName)) }

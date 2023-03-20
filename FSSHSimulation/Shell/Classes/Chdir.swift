@@ -16,7 +16,7 @@ class Chdir: CommandProtocol {
         }
         
         guard let directory = environment.currentDirectory.getNode(atPath: path) as? Directory else {
-            throw Errors.nodeNotFound
+            throw Errors.nodeNotFound(name: path)
         }
         
         environment.currentDirectory = directory

@@ -21,7 +21,7 @@ final class Find: CommandProtocol {
     
     private func find(node: Node?) throws {
         guard let node = node as? DirectoryProtocol else {
-            throw Errors.nodeNotFound
+            throw Errors.nodeNotFound(name: node?.name ?? .empty)
         }
         
         print(node.path)
