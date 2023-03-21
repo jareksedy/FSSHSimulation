@@ -31,11 +31,16 @@ extension DirectoryProtocol {
         guard !path.isEmpty, let token = tokens.first else { return self }
         
         switch token {
-        case .empty: pointer = root
-        case .tilde: pointer = home
-        case .dot: pointer = self
-        case .doubleDot: pointer = parent ?? self
-        default: pointer = getNode(withName: token)
+        case .empty:
+            pointer = root
+        case .tilde:
+            pointer = home
+        case .dot:
+            pointer = self
+        case .doubleDot:
+            pointer = parent ?? self
+        default:
+            pointer = getNode(withName: token)
         }
         
         let pathNext = tokens.dropFirst().joined(separator: .slash)

@@ -48,7 +48,7 @@ extension String {
     
     func isValid() -> Bool {
         guard self != .empty else { return false }
-        let otherCharacters = CharacterSet(charactersIn: .underscore)
+        let otherCharacters = CharacterSet(charactersIn: .dot + .underscore)
         return rangeOfCharacter(from: .alphanumerics.union(otherCharacters).inverted) == nil
     }
 }
