@@ -12,13 +12,13 @@ final class Mkdir: CommandProtocol {
         }
         
         arguments.forEach { argument in
-            do { try mkdir(path: argument) }
+            do { try makeDirectory(atPath: argument) }
             catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
             catch let error { print(error.localizedDescription) }
         }
     }
     
-    private func mkdir(path: String) throws {
+    private func makeDirectory(atPath path: String) throws {
         let targetDirectoryName = path.stripPath()
         let parentDirectoryName = path.stripFilename()
         
