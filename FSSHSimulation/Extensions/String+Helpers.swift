@@ -34,7 +34,7 @@ extension String {
     }
     
     func stripFilename() -> String {
-        tokenize().map { $0 == .empty ? .slash : $0 }.dropLast().joined(separator: .slash).replacingOccurrences(of: "//", with: "/")
+        tokenize().map { $0 == .empty ? .slash : $0 }.dropLast().joined(separator: .slash).replacingOccurrences(of: Self.doubleSlash, with: Self.slash)
     }
     
     func toClass() -> CommandProtocol.Type? {

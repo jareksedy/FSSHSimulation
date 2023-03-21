@@ -33,6 +33,8 @@
 		CA3CADEA29C74EF400B51555 /* CharacterSet+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */; };
 		CA3CADEC29C7678700B51555 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEB29C7678700B51555 /* Test.swift */; };
 		CA3CADED29C7678700B51555 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEB29C7678700B51555 /* Test.swift */; };
+		CA3CADEF29C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
+		CA3CADF029C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -69,6 +71,7 @@
 		CA3CADE529C70CCA00B51555 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA3CADEB29C7678700B51555 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -212,6 +215,7 @@
 				CA2A3CA129C37FD8006DFCED /* CVarArg+dollarSign.swift */,
 				CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */,
 				CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */,
+				CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */,
 				CAE9A3A929BC640200FBAAF8 /* String+Helpers.swift */,
 			);
 			path = Extensions;
@@ -333,6 +337,7 @@
 				CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */,
 				CA2A3CBF29C5799B006DFCED /* Find.swift in Sources */,
 				CA3CADE729C70CCA00B51555 /* Errors.swift in Sources */,
+				CA3CADF029C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */,
 				CA2A3CBD29C5799B006DFCED /* Pwd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +364,7 @@
 				CAE9A3AA29BC640200FBAAF8 /* String+Helpers.swift in Sources */,
 				CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */,
 				CA6B186C29BDAFF600A44F5F /* Pwd.swift in Sources */,
+				CA3CADEF29C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */,
 				CA3CADE629C70CCA00B51555 /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
