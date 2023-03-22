@@ -51,4 +51,8 @@ extension String {
         let otherCharacters = CharacterSet(charactersIn: .dot + .underscore)
         return rangeOfCharacter(from: .alphanumerics.union(otherCharacters).inverted) == nil
     }
+    
+    func toData() -> Data {
+        Data(self.utf8)
+    }
 }

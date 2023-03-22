@@ -23,9 +23,13 @@ final class Environment {
     private init() {
         let homeDirectory = Directory(name: "home")
         let userDirectory = Directory(name: "root")
+        let etcDirectory = Directory(name: "etc")
+        let motdFile = File(name: "motd")
 
         try? homeDirectory.add(node: userDirectory)
         try? rootDirectory.add(node: homeDirectory)
+        try? rootDirectory.add(node: etcDirectory)
+        try? etcDirectory.add(node: motdFile)
         
         self.currentDirectory = userDirectory
     }

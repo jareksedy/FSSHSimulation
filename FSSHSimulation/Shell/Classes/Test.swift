@@ -10,9 +10,8 @@ import Foundation
 final class Test: CommandProtocol {
     var contents: Data? = nil
     func main(arguments: [String]) throws {
-        if let data = "Превед, медвед!".data(using: .utf8) {
-            contents = data
-        }
-        print(contents!.mimeType)
+//        let node = environment.currentDirectory.getNode(atPath: "/etc/motd")
+//        print(node?.path)
+//        print(node?.parent?.path)
     }
 }

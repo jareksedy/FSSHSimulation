@@ -64,8 +64,8 @@ final class FSSHSimulationTests: XCTestCase {
         for i in 0 ... 9_999 {
             try? mkdirCommand.main(arguments: ["temp_directory\(i)"])
         }
-        
-        XCTAssert(environment.rootDirectory.nodes.count == 10_002)
+
+        XCTAssert(environment.rootDirectory.nodes.count == 10_003)
     }
     
     func testRmdir() throws {

@@ -11,25 +11,24 @@ final class Find: CommandProtocol {
             throw Errors.usageDirectoryName
         }
         
-        arguments.forEach { path in
-            let node = environment.currentDirectory.getNode(atPath: path)
-            do { try find(node: node) }
-            catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
-            catch let error { print(error.localizedDescription) }
+        do {
+            try arguments.forEach { path in
+                guard let node = environment.currentDirectory.getNode(atPath: path) else {
+                    throw Errors.nodeNotFound(name: path)
+                }
+                
+                find(node: node)
+            }
         }
     }
     
-    private func find(node: Node?) throws {
-        guard let node = node as? DirectoryProtocol else {
-            throw Errors.nodeNotFound(name: node?.name ?? .empty)
-        }
-        
+    private func find(node: Node) {
         print(node.path)
         
+        guard let node = node as? DirectoryProtocol else { return }
+        
         node.nodes.forEach { node in
-            do { try find(node: node) }
-            catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
-            catch let error { print(error.localizedDescription) }
+            find(node: node)
         }
     }
 }
