@@ -43,6 +43,10 @@
 		CA3CADFF29CACE2700B51555 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFD29CACE2700B51555 /* File.swift */; };
 		CA3CAE1029CB17EB00B51555 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE0F29CB17EB00B51555 /* Cat.swift */; };
 		CA3CAE1129CB17EB00B51555 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE0F29CB17EB00B51555 /* Cat.swift */; };
+		CA3CAE1329CB6F6E00B51555 /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1229CB6F6E00B51555 /* Touch.swift */; };
+		CA3CAE1429CB6F6E00B51555 /* Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1229CB6F6E00B51555 /* Touch.swift */; };
+		CA3CAE1629CB729500B51555 /* Rm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1529CB729500B51555 /* Rm.swift */; };
+		CA3CAE1729CB729500B51555 /* Rm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1529CB729500B51555 /* Rm.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -84,6 +88,8 @@
 		CA3CADFA29CACB5000B51555 /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		CA3CADFD29CACE2700B51555 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		CA3CAE0F29CB17EB00B51555 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		CA3CAE1229CB6F6E00B51555 /* Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Touch.swift; sourceTree = "<group>"; };
+		CA3CAE1529CB729500B51555 /* Rm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rm.swift; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -150,10 +156,12 @@
 				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
 				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
 				CA2A3CC429C5A772006DFCED /* Rmdir.swift */,
+				CA3CAE1529CB729500B51555 /* Rm.swift */,
 				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
 				CA6B186929BD996000A44F5F /* Chdir.swift */,
 				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
 				CA3CAE0F29CB17EB00B51555 /* Cat.swift */,
+				CA3CAE1229CB6F6E00B51555 /* Touch.swift */,
 				CA3CADEB29C7678700B51555 /* Test.swift */,
 				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 			);
@@ -341,6 +349,7 @@
 				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
 				CA3CADED29C7678700B51555 /* Test.swift in Sources */,
 				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
+				CA3CAE1729CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
 				CA2A3CB529C57985006DFCED /* Environment.swift in Sources */,
 				CA2A3CC029C5799B006DFCED /* Chdir.swift in Sources */,
@@ -353,6 +362,7 @@
 				CA2A3CBB29C57991006DFCED /* Directory.swift in Sources */,
 				CA3CADE429C61E2A00B51555 /* Rmdir.swift in Sources */,
 				CA2A3CBC29C57994006DFCED /* CommandProtocol.swift in Sources */,
+				CA3CAE1429CB6F6E00B51555 /* Touch.swift in Sources */,
 				CA2A3CC129C5799B006DFCED /* Exit.swift in Sources */,
 				CA2A3CBF29C5799B006DFCED /* Find.swift in Sources */,
 				CA3CAE1129CB17EB00B51555 /* Cat.swift in Sources */,
@@ -372,6 +382,7 @@
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
 				CA3CADEC29C7678700B51555 /* Test.swift in Sources */,
 				CADBA01C29C0D75600F4A1C0 /* Node.swift in Sources */,
+				CA3CAE1629CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */,
 				CAA88A4929BC3CA4002FC112 /* main.swift in Sources */,
 				CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */,
@@ -384,6 +395,7 @@
 				CAE9A3AF29BC6ABB00FBAAF8 /* CommandProtocol.swift in Sources */,
 				CA6B186E29BDCBD600A44F5F /* Cd.swift in Sources */,
 				CA2A3CC529C5A772006DFCED /* Rmdir.swift in Sources */,
+				CA3CAE1329CB6F6E00B51555 /* Touch.swift in Sources */,
 				CAE9A3AA29BC640200FBAAF8 /* String+Helpers.swift in Sources */,
 				CAE9A3B429BC6BA300FBAAF8 /* Find.swift in Sources */,
 				CA3CAE1029CB17EB00B51555 /* Cat.swift in Sources */,

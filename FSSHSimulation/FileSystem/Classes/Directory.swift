@@ -32,12 +32,22 @@ final class Directory: DirectoryProtocol {
         guard let index = nodes.firstIndex(where: { $0 === node }) else {
             throw Errors.nodeNotFound(name: node.name)
         }
-        
-        guard let directory = node as? DirectoryProtocol, directory.nodes.isEmpty else {
+
+        guard let directory = node as? DirectoryProtocol else {
+            guard let file = node as? FileProtocol else {
+                throw Errors.nodeNotFound(name: node.name)
+            }
+            
+            nodes.remove(at: index)
+            file.parent = nil
+            return
+        }
+
+        guard directory.nodes.isEmpty else {
             throw Errors.nodeNotEmpty(name: node.name)
         }
-        
+
         nodes.remove(at: index)
-        node.parent = nil
+        directory.parent = nil
     }
 }

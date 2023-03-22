@@ -11,8 +11,8 @@ final class Rmdir: CommandProtocol {
             throw Errors.usageDirectoryName
         }
         
-        arguments.forEach { argument in
-            do { try removeDirectory(atPath: argument) }
+        arguments.forEach { path in
+            do { try removeDirectory(atPath: path) }
             catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
             catch let error { print(error.localizedDescription) }
         }

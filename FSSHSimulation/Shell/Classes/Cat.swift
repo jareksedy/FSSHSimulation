@@ -2,7 +2,7 @@
 //  Cat.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 22.03.2023.
+//  Created by Yaroslav Sedyshev on 22.03.2023.
 //
 
 final class Cat: CommandProtocol {
