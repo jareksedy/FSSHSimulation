@@ -6,7 +6,7 @@
 //
 
 protocol Node: AnyObject {
-    var parent: Directory? { get set }
+    var parent: DirectoryProtocol? { get set }
     var name: String { get set }
 }
 

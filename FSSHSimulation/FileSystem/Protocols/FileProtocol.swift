@@ -10,6 +10,6 @@ import Foundation
 protocol FileProtocol: Node {
     var contents: Data? { get }
     
-    func write(_ data: Data?) throws
+    func write(_ data: Data?)
     func read() -> Data?
 }

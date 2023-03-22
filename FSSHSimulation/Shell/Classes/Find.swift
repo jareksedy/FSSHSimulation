@@ -25,9 +25,7 @@ final class Find: CommandProtocol {
     private func find(node: Node) {
         print(node.path)
         
-        guard let node = node as? DirectoryProtocol else { return }
-        
-        node.nodes.forEach { node in
+        (node as? DirectoryProtocol)?.nodes.forEach { node in
             find(node: node)
         }
     }

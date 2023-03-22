@@ -37,8 +37,6 @@
 		CA3CADF029C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
 		CA3CADF529CA12B900B51555 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF429CA12B900B51555 /* FileProtocol.swift */; };
 		CA3CADF629CA12B900B51555 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF429CA12B900B51555 /* FileProtocol.swift */; };
-		CA3CADF829CAC9B600B51555 /* DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF729CAC9B600B51555 /* DocumentType.swift */; };
-		CA3CADF929CAC9B600B51555 /* DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF729CAC9B600B51555 /* DocumentType.swift */; };
 		CA3CADFB29CACB5000B51555 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFA29CACB5000B51555 /* Data+Helpers.swift */; };
 		CA3CADFC29CACB5000B51555 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFA29CACB5000B51555 /* Data+Helpers.swift */; };
 		CA3CADFE29CACE2700B51555 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFD29CACE2700B51555 /* File.swift */; };
@@ -81,7 +79,6 @@
 		CA3CADEB29C7678700B51555 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA3CADF429CA12B900B51555 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
-		CA3CADF729CAC9B600B51555 /* DocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentType.swift; sourceTree = "<group>"; };
 		CA3CADFA29CACB5000B51555 /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		CA3CADFD29CACE2700B51555 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -171,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				CA3CADE529C70CCA00B51555 /* Errors.swift */,
-				CA3CADF729CAC9B600B51555 /* DocumentType.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -339,7 +335,6 @@
 				CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */,
 				CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */,
 				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
-				CA3CADF929CAC9B600B51555 /* DocumentType.swift in Sources */,
 				CA3CADED29C7678700B51555 /* Test.swift in Sources */,
 				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
 				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
@@ -370,7 +365,6 @@
 				CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */,
 				CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */,
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
-				CA3CADF829CAC9B600B51555 /* DocumentType.swift in Sources */,
 				CA3CADEC29C7678700B51555 /* Test.swift in Sources */,
 				CADBA01C29C0D75600F4A1C0 /* Node.swift in Sources */,
 				CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */,

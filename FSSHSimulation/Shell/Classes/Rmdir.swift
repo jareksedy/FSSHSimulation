@@ -28,7 +28,7 @@ final class Rmdir: CommandProtocol {
             try parentDirectory.remove(node: targetDirectory)
             
             if targetDirectory === environment.currentDirectory {
-                environment.currentDirectory = parentDirectory
+                environment.currentDirectory = parentDirectory as! Directory
             }
         }
         catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }

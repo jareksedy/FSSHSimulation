@@ -5,6 +5,8 @@
 //  Created by Yaroslav Sedyshev on 12.03.2023.
 //
 
+import Foundation
+
 final class Environment {
     let rootDirectory = Directory(name: .empty)
     
@@ -32,5 +34,10 @@ final class Environment {
         try? etcDirectory.add(node: motdFile)
         
         self.currentDirectory = userDirectory
+        
+        motdFile.write(.motd)
+        if let motd = motdFile.read() {
+            print(motd.toString())
+        }
     }
 }

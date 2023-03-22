@@ -8,7 +8,7 @@
 import Foundation
 
 final class File: FileProtocol {
-    var parent: Directory?
+    weak var parent: DirectoryProtocol?
     var name: String
     
     internal var contents: Data?
@@ -17,7 +17,7 @@ final class File: FileProtocol {
         self.name = name
     }
     
-    func write(_ data: Data?) throws {
+    func write(_ data: Data?) {
         contents = data
     }
     

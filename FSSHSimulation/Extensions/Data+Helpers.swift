@@ -8,18 +8,15 @@
 import Foundation
 
 extension Data {
-    var mimeType: DocumentType {
-        var firstByte: UInt8 = 0
-        copyBytes(to: &firstByte, count: 1)
+    static var motd: Data {
+        """
+        Filesystem and Unix Shell Simulation.
+        FSSHSimulation v.0. by Yaroslav Sedyshev <jareksedy@icloud.com>
         
-        switch firstByte {
-        case 0xFF: return .jpeg
-        case 0x89: return .png
-        case 0x47: return .gif
-        case 0x25: return .pdf
-        case 0xD0: return .vnd
-        case 0x46: return .plainText
-        default: return .anyBinary
-        }
+        """.toData()
+    }
+    
+    func toString() -> String {
+        String(decoding: self, as: UTF8.self)
     }
 }
