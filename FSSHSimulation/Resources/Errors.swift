@@ -40,9 +40,9 @@ enum Errors: Error {
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
         case .notADirectory(name: let name):
-            return "%@: not a directory: %@".format(commandName, name)
+            return "%@: %@ is not a directory".format(commandName, name)
         case .isADirectory(name: let name):
-            return "%@ is a directory: %@".format(commandName, name)
+            return "%@: %@ is a directory".format(commandName, name)
         case .commandNotFound:
             return "command not found: %@".format(commandName)
         }
