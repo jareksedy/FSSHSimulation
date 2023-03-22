@@ -10,14 +10,17 @@ enum Errors: Error {
     case nodeNotFound(name: String)
     case nodeNotEmpty(name: String)
     case invalidFileName(name: String)
+    case notADirectory(name: String)
+    case isADirectory(name: String)
     
     case tooManyArguments
     case usageDirectoryName
+    case usageFiles
     
     case commandNotFound
     
     var localizedDescription: String {
-        return "Unknown error..."
+        return "Unknown error."
     }
     
     func localizedDescription(commandName: String) -> String {
@@ -31,9 +34,15 @@ enum Errors: Error {
         case .tooManyArguments:
             return "%@: too many arguments".format(commandName)
         case .usageDirectoryName:
-            return "usage: %@: directory_name".format(commandName)
+            return "usage: %@ directory_name ...".format(commandName)
+        case .usageFiles:
+            return "usage: %@ file_name ...".format(commandName)
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
+        case .notADirectory(name: let name):
+            return "%@: not a directory: %@".format(commandName, name)
+        case .isADirectory(name: let name):
+            return "%@ is a directory: %@".format(commandName, name)
         case .commandNotFound:
             return "command not found: %@".format(commandName)
         }

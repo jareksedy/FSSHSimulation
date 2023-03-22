@@ -17,7 +17,7 @@ final class File: FileProtocol {
         self.name = name
     }
     
-    func write(_ data: Data?) {
+    func write(_ data: Data) {
         contents = data
     }
     

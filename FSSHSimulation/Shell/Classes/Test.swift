@@ -10,8 +10,8 @@ import Foundation
 final class Test: CommandProtocol {
     var contents: Data? = nil
     func main(arguments: [String]) throws {
-//        let node = environment.currentDirectory.getNode(atPath: "/etc/motd")
+//        environment.currentDirectory = environment.currentDirectory.getNode(atPath: "/etc") as? Directory ?? environment.rootDirectory
+//        let node = environment.currentDirectory.getNode(atPath: "motd")
 //        print(node?.path)
-//        print(node?.parent?.path)
     }
 }

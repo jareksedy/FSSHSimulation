@@ -41,6 +41,7 @@ extension DirectoryProtocol {
         }
         
         let pathNext = tokens.dropFirst().joined(separator: .slash)
+        guard pathNext != .empty else { return pointer }
         return (pointer as? DirectoryProtocol)?.getNode(atPath: pathNext) ?? (pointer as? DirectoryProtocol)?.getNode(withName: pathNext)
     }
 }
