@@ -35,6 +35,12 @@
 		CA3CADED29C7678700B51555 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEB29C7678700B51555 /* Test.swift */; };
 		CA3CADEF29C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
 		CA3CADF029C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
+		CA3CADF529CA12B900B51555 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF429CA12B900B51555 /* FileProtocol.swift */; };
+		CA3CADF629CA12B900B51555 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF429CA12B900B51555 /* FileProtocol.swift */; };
+		CA3CADF829CAC9B600B51555 /* DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF729CAC9B600B51555 /* DocumentType.swift */; };
+		CA3CADF929CAC9B600B51555 /* DocumentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF729CAC9B600B51555 /* DocumentType.swift */; };
+		CA3CADFB29CACB5000B51555 /* Data+Mimetype.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFA29CACB5000B51555 /* Data+Mimetype.swift */; };
+		CA3CADFC29CACB5000B51555 /* Data+Mimetype.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADFA29CACB5000B51555 /* Data+Mimetype.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -72,6 +78,9 @@
 		CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA3CADEB29C7678700B51555 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+SpecialCharacters.swift"; sourceTree = "<group>"; };
+		CA3CADF429CA12B900B51555 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
+		CA3CADF729CAC9B600B51555 /* DocumentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentType.swift; sourceTree = "<group>"; };
+		CA3CADFA29CACB5000B51555 /* Data+Mimetype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Mimetype.swift"; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 			children = (
 				CADBA01B29C0D75600F4A1C0 /* Node.swift */,
 				CA2A3CA329C38701006DFCED /* DirectoryProtocol.swift */,
+				CA3CADF429CA12B900B51555 /* FileProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3CADE529C70CCA00B51555 /* Errors.swift */,
+				CA3CADF729CAC9B600B51555 /* DocumentType.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 				CA2A3C9F29C37A9A006DFCED /* String+SpecialCharacters.swift */,
 				CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */,
 				CAE9A3A929BC640200FBAAF8 /* String+Helpers.swift */,
+				CA3CADFA29CACB5000B51555 /* Data+Mimetype.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -323,12 +335,15 @@
 				CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */,
 				CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */,
 				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
+				CA3CADF929CAC9B600B51555 /* DocumentType.swift in Sources */,
 				CA3CADED29C7678700B51555 /* Test.swift in Sources */,
 				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
 				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
 				CA2A3CB529C57985006DFCED /* Environment.swift in Sources */,
 				CA2A3CC029C5799B006DFCED /* Chdir.swift in Sources */,
+				CA3CADF629CA12B900B51555 /* FileProtocol.swift in Sources */,
 				CA2A3CBE29C5799B006DFCED /* Cd.swift in Sources */,
+				CA3CADFC29CACB5000B51555 /* Data+Mimetype.swift in Sources */,
 				CA2A3CBA29C5798E006DFCED /* Node.swift in Sources */,
 				CA3CADEA29C74EF400B51555 /* CharacterSet+SpecialCharacters.swift in Sources */,
 				CA2A3CBB29C57991006DFCED /* Directory.swift in Sources */,
@@ -350,12 +365,15 @@
 				CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */,
 				CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */,
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
+				CA3CADF829CAC9B600B51555 /* DocumentType.swift in Sources */,
 				CA3CADEC29C7678700B51555 /* Test.swift in Sources */,
 				CADBA01C29C0D75600F4A1C0 /* Node.swift in Sources */,
 				CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */,
 				CAA88A4929BC3CA4002FC112 /* main.swift in Sources */,
 				CAE9A39529BC466900FBAAF8 /* Directory.swift in Sources */,
+				CA3CADF529CA12B900B51555 /* FileProtocol.swift in Sources */,
 				CA6B186A29BD996000A44F5F /* Chdir.swift in Sources */,
+				CA3CADFB29CACB5000B51555 /* Data+Mimetype.swift in Sources */,
 				CA2A3CA429C38701006DFCED /* DirectoryProtocol.swift in Sources */,
 				CA3CADE929C74EF400B51555 /* CharacterSet+SpecialCharacters.swift in Sources */,
 				CAE9A3AF29BC6ABB00FBAAF8 /* CommandProtocol.swift in Sources */,
