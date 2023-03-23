@@ -31,8 +31,6 @@
 		CA3CADE729C70CCA00B51555 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADE529C70CCA00B51555 /* Errors.swift */; };
 		CA3CADE929C74EF400B51555 /* CharacterSet+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */; };
 		CA3CADEA29C74EF400B51555 /* CharacterSet+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */; };
-		CA3CADEC29C7678700B51555 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEB29C7678700B51555 /* Test.swift */; };
-		CA3CADED29C7678700B51555 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEB29C7678700B51555 /* Test.swift */; };
 		CA3CADEF29C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
 		CA3CADF029C9415500B51555 /* StringProtocol+SpecialCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */; };
 		CA3CADF529CA12B900B51555 /* FileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CADF429CA12B900B51555 /* FileProtocol.swift */; };
@@ -86,7 +84,6 @@
 		CA2A3CC429C5A772006DFCED /* Rmdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rmdir.swift; sourceTree = "<group>"; };
 		CA3CADE529C70CCA00B51555 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		CA3CADE829C74EF400B51555 /* CharacterSet+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+SpecialCharacters.swift"; sourceTree = "<group>"; };
-		CA3CADEB29C7678700B51555 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CA3CADEE29C9415500B51555 /* StringProtocol+SpecialCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+SpecialCharacters.swift"; sourceTree = "<group>"; };
 		CA3CADF429CA12B900B51555 /* FileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProtocol.swift; sourceTree = "<group>"; };
 		CA3CADFA29CACB5000B51555 /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
@@ -170,7 +167,6 @@
 				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
 				CA3CAE0F29CB17EB00B51555 /* Cat.swift */,
 				CA3CAE1229CB6F6E00B51555 /* Touch.swift */,
-				CA3CADEB29C7678700B51555 /* Test.swift */,
 				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 			);
 			path = Classes;
@@ -355,7 +351,6 @@
 				CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */,
 				CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */,
 				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
-				CA3CADED29C7678700B51555 /* Test.swift in Sources */,
 				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
 				CA3CAE1729CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
@@ -390,7 +385,6 @@
 				CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */,
 				CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */,
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
-				CA3CADEC29C7678700B51555 /* Test.swift in Sources */,
 				CADBA01C29C0D75600F4A1C0 /* Node.swift in Sources */,
 				CA3CAE1629CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */,
