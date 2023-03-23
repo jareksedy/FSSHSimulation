@@ -8,7 +8,7 @@ To get the list of available commands build, run and type the following:
 ```sh
 cat ~/available_commands
 ```
-Note that the commands may be limited in functionality comparing to those found in the most of UNIX-like operating systems. The purpose of this piece of software was strictly educational. I did not mean to recreate a UNIX shell with full functionality.
+Note that the commands may be limited in functionality comparing to those found in the most UNIX-like operating systems. The purpose of this piece of software was strictly educational. I did not mean to recreate a UNIX shell with full functionality.
 
 ## License
 

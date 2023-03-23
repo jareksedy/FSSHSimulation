@@ -51,6 +51,7 @@
 		CA3CAE1D29CBFBE700B51555 /* Echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1B29CBFBE700B51555 /* Echo.swift */; };
 		CA3CAE1F29CC0C5100B51555 /* Wget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1E29CC0C5100B51555 /* Wget.swift */; };
 		CA3CAE2029CC0C5100B51555 /* Wget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1E29CC0C5100B51555 /* Wget.swift */; };
+		CA3CAE2329CC9D1F00B51555 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CA3CAE2229CC9D1F00B51555 /* LICENSE */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -97,6 +98,7 @@
 		CA3CAE1B29CBFBE700B51555 /* Echo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Echo.swift; sourceTree = "<group>"; };
 		CA3CAE1E29CC0C5100B51555 /* Wget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wget.swift; sourceTree = "<group>"; };
 		CA3CAE2129CC997E00B51555 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CA3CAE2229CC9D1F00B51555 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				CA3CAE2129CC997E00B51555 /* README.md */,
+				CA3CAE2229CC9D1F00B51555 /* LICENSE */,
 				CAA88A4729BC3CA4002FC112 /* FSSHSimulation */,
 				CA2A3CAE29C578CC006DFCED /* FSSHSimulationTests */,
 				CAA88A4629BC3CA4002FC112 /* Products */,
@@ -343,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3CAE2329CC9D1F00B51555 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
