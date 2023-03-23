@@ -13,7 +13,8 @@ extension Data {
         Filesystem and Unix Shell Simulation.
         FSSHSimulation v.0. by Yaroslav Sedyshev <jareksedy@icloud.com>
         
-        """.toData()
+        """
+            .toData()
     }
     
     func toString() -> String {

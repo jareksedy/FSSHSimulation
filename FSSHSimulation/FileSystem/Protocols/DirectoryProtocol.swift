@@ -28,9 +28,7 @@ extension DirectoryProtocol {
         let tokens = path.tokenize()
         var pointer: Node? = self
         
-        guard !path.isEmpty, let token = tokens.first else {
-            return pointer
-        }
+        guard !path.isEmpty, let token = tokens.first else { return self }
         
         switch token {
         case .empty: pointer = root
@@ -41,7 +39,9 @@ extension DirectoryProtocol {
         }
         
         let pathNext = tokens.dropFirst().joined(separator: .slash)
-        guard pathNext != .empty else { return pointer }
-        return (pointer as? DirectoryProtocol)?.getNode(atPath: pathNext) ?? (pointer as? DirectoryProtocol)?.getNode(withName: pathNext)
+        
+        return pathNext == .empty ? pointer :
+        (pointer as? DirectoryProtocol)?.getNode(atPath: pathNext) ??
+        (pointer as? DirectoryProtocol)?.getNode(withName: pathNext)
     }
 }

@@ -176,12 +176,12 @@
 			path = FSSHSimulationTests;
 			sourceTree = "<group>";
 		};
-		CA6B186429BD82BF00A44F5F /* Resources */ = {
+		CA6B186429BD82BF00A44F5F /* Errors */ = {
 			isa = PBXGroup;
 			children = (
 				CA3CADE529C70CCA00B51555 /* Errors.swift */,
 			);
-			path = Resources;
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		CAA88A3C29BC3CA4002FC112 = {
@@ -206,10 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				CAE9A39A29BC5CD000FBAAF8 /* Environment */,
+				CA6B186429BD82BF00A44F5F /* Errors */,
 				CAE9A3AB29BC640700FBAAF8 /* Extensions */,
 				CAE9A39329BC3E9400FBAAF8 /* FileSystem */,
 				CAE9A3B029BC6ABE00FBAAF8 /* Shell */,
-				CA6B186429BD82BF00A44F5F /* Resources */,
 				CAA88A4829BC3CA4002FC112 /* main.swift */,
 			);
 			path = FSSHSimulation;

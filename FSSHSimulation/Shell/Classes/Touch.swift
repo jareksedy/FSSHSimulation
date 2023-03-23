@@ -27,7 +27,6 @@ final class Touch: CommandProtocol {
         }
         
         let file = File(name: fileName)
-        file.write("ID: \(Int.random(in: 200...999))".toData())
         
         do { try directory.add(node: file) }
         catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
