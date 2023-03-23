@@ -159,19 +159,19 @@
 		CA2A3CA829C49F21006DFCED /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CA3CAE0F29CB17EB00B51555 /* Cat.swift */,
+				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
+				CA6B186929BD996000A44F5F /* Chdir.swift */,
+				CA3CAE1B29CBFBE700B51555 /* Echo.swift */,
+				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 				CAE9A3B329BC6BA300FBAAF8 /* Find.swift */,
 				CA3CAE1829CBE64100B51555 /* Ls.swift */,
 				CA6B186729BD926A00A44F5F /* Mkdir.swift */,
-				CA2A3CC429C5A772006DFCED /* Rmdir.swift */,
-				CA3CAE1529CB729500B51555 /* Rm.swift */,
-				CA3CAE1B29CBFBE700B51555 /* Echo.swift */,
 				CA6B186B29BDAFF600A44F5F /* Pwd.swift */,
-				CA6B186929BD996000A44F5F /* Chdir.swift */,
-				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
-				CA3CAE0F29CB17EB00B51555 /* Cat.swift */,
+				CA3CAE1529CB729500B51555 /* Rm.swift */,
+				CA2A3CC429C5A772006DFCED /* Rmdir.swift */,
 				CA3CAE1229CB6F6E00B51555 /* Touch.swift */,
 				CA3CAE1E29CC0C5100B51555 /* Wget.swift */,
-				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
