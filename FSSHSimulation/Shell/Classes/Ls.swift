@@ -2,7 +2,7 @@
 //  Ls.swift
 //  FSSHSimulation
 //
-//  Created by Ярослав on 23.03.2023.
+//  Created by Yaroslav Sedyshev on 23.03.2023.
 //
 
 fileprivate enum Strings {
