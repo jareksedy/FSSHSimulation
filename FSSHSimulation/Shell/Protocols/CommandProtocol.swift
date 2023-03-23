@@ -18,4 +18,19 @@ extension CommandProtocol {
     var commandName: String {
         String(describing: self).components(separatedBy: ".").last?.lowercased() ?? .empty
     }
+    
+    func touchFile(atPath path: String) throws {
+        let fileName = path.stripPath()
+        let parentDirectoryName = path.stripFilename()
+        
+        guard let directory = environment.currentDirectory.getNode(atPath: parentDirectoryName) as? DirectoryProtocol else {
+            throw Errors.nodeNotFound(name: path)
+        }
+        
+        let file = File(name: fileName)
+        
+        do { try directory.add(node: file) }
+        catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
+        catch let error { print(error.localizedDescription) }
+    }
 }

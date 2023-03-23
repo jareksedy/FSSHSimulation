@@ -16,6 +16,7 @@ enum Errors: Error {
     case tooManyArguments
     case usageDirectoryName
     case usageFiles
+    case usageArgument
     
     case commandNotFound
     
@@ -37,6 +38,8 @@ enum Errors: Error {
             return "usage: %@ directory_name ...".format(commandName)
         case .usageFiles:
             return "usage: %@ file_name ...".format(commandName)
+        case .usageArgument:
+            return "usage: %@ argument [> file_name]"
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
         case .notADirectory(name: let name):

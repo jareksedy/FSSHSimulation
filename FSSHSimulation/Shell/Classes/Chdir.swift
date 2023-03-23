@@ -15,6 +15,10 @@ class Chdir: CommandProtocol {
             throw Errors.tooManyArguments
         }
         
+        if environment.currentDirectory.getNode(atPath: path) is FileProtocol {
+            throw Errors.notADirectory(name: path)
+        }
+        
         guard let directory = environment.currentDirectory.getNode(atPath: path) as? Directory else {
             throw Errors.nodeNotFound(name: path)
         }
