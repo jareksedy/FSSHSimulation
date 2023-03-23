@@ -96,6 +96,7 @@
 		CA3CAE1829CBE64100B51555 /* Ls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ls.swift; sourceTree = "<group>"; };
 		CA3CAE1B29CBFBE700B51555 /* Echo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Echo.swift; sourceTree = "<group>"; };
 		CA3CAE1E29CC0C5100B51555 /* Wget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wget.swift; sourceTree = "<group>"; };
+		CA3CAE2129CC997E00B51555 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -195,6 +196,7 @@
 		CAA88A3C29BC3CA4002FC112 = {
 			isa = PBXGroup;
 			children = (
+				CA3CAE2129CC997E00B51555 /* README.md */,
 				CAA88A4729BC3CA4002FC112 /* FSSHSimulation */,
 				CA2A3CAE29C578CC006DFCED /* FSSHSimulationTests */,
 				CAA88A4629BC3CA4002FC112 /* Products */,
