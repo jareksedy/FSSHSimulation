@@ -10,6 +10,7 @@ enum Errors: Error {
     case nodeNotFound(name: String)
     case nodeNotEmpty(name: String)
     case invalidFileName(name: String)
+    case invalidURL(name: String)
     case notADirectory(name: String)
     case isADirectory(name: String)
     
@@ -17,6 +18,7 @@ enum Errors: Error {
     case usageDirectoryName
     case usageFiles
     case usageArgument
+    case usageURL
     
     case commandNotFound
     
@@ -39,9 +41,13 @@ enum Errors: Error {
         case .usageFiles:
             return "usage: %@ file_name ...".format(commandName)
         case .usageArgument:
-            return "usage: %@ argument [> file_name]"
+            return "usage: %@ argument > [file_name]".format(commandName)
+        case .usageURL:
+            return "usage: %@ url > [file_name]".format(commandName)
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
+        case .invalidURL(name: let name):
+            return "%@: invalid url: $@".format(commandName, name)
         case .notADirectory(name: let name):
             return "%@: %@ is not a directory".format(commandName, name)
         case .isADirectory(name: let name):

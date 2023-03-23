@@ -49,6 +49,8 @@
 		CA3CAE1A29CBE64100B51555 /* Ls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1829CBE64100B51555 /* Ls.swift */; };
 		CA3CAE1C29CBFBE700B51555 /* Echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1B29CBFBE700B51555 /* Echo.swift */; };
 		CA3CAE1D29CBFBE700B51555 /* Echo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1B29CBFBE700B51555 /* Echo.swift */; };
+		CA3CAE1F29CC0C5100B51555 /* Wget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1E29CC0C5100B51555 /* Wget.swift */; };
+		CA3CAE2029CC0C5100B51555 /* Wget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3CAE1E29CC0C5100B51555 /* Wget.swift */; };
 		CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B185E29BD7E0000A44F5F /* Environment.swift */; };
 		CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186529BD8C7B00A44F5F /* Exit.swift */; };
 		CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6B186729BD926A00A44F5F /* Mkdir.swift */; };
@@ -93,6 +95,7 @@
 		CA3CAE1529CB729500B51555 /* Rm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rm.swift; sourceTree = "<group>"; };
 		CA3CAE1829CBE64100B51555 /* Ls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ls.swift; sourceTree = "<group>"; };
 		CA3CAE1B29CBFBE700B51555 /* Echo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Echo.swift; sourceTree = "<group>"; };
+		CA3CAE1E29CC0C5100B51555 /* Wget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wget.swift; sourceTree = "<group>"; };
 		CA6B185E29BD7E0000A44F5F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		CA6B186529BD8C7B00A44F5F /* Exit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exit.swift; sourceTree = "<group>"; };
 		CA6B186729BD926A00A44F5F /* Mkdir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mkdir.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 				CA6B186D29BDCBD600A44F5F /* Cd.swift */,
 				CA3CAE0F29CB17EB00B51555 /* Cat.swift */,
 				CA3CAE1229CB6F6E00B51555 /* Touch.swift */,
+				CA3CAE1E29CC0C5100B51555 /* Wget.swift */,
 				CA6B186529BD8C7B00A44F5F /* Exit.swift */,
 			);
 			path = Classes;
@@ -351,6 +355,7 @@
 				CA2A3CC229C5799B006DFCED /* Mkdir.swift in Sources */,
 				CA2A3CB729C5798A006DFCED /* String+Helpers.swift in Sources */,
 				CA2A3CB029C578CC006DFCED /* FSSHSimulationTests.swift in Sources */,
+				CA3CAE2029CC0C5100B51555 /* Wget.swift in Sources */,
 				CA2A3CB929C5798E006DFCED /* DirectoryProtocol.swift in Sources */,
 				CA3CAE1729CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CB629C5798A006DFCED /* CVarArg+dollarSign.swift in Sources */,
@@ -385,6 +390,7 @@
 				CA6B185F29BD7E0000A44F5F /* Environment.swift in Sources */,
 				CA6B186829BD926A00A44F5F /* Mkdir.swift in Sources */,
 				CA6B186629BD8C7B00A44F5F /* Exit.swift in Sources */,
+				CA3CAE1F29CC0C5100B51555 /* Wget.swift in Sources */,
 				CADBA01C29C0D75600F4A1C0 /* Node.swift in Sources */,
 				CA3CAE1629CB729500B51555 /* Rm.swift in Sources */,
 				CA2A3CA029C37A9A006DFCED /* String+SpecialCharacters.swift in Sources */,
