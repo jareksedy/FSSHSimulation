@@ -15,19 +15,19 @@ final class Wget: CommandProtocol {
         
         var url: String? = arguments.joined(separator: .whitespace)
         var fileName: String? = nil
-        //var contents: Data? = nil
         
         if let index = arguments.firstIndex(of: .greaterThan) {
             url = arguments.prefix(index).joined(separator: .whitespace)
             fileName = arguments.last
         }
         
-        guard let fileName = fileName else {
-            throw Errors.nodeNotFound(name: .empty)
-        }
-        
         guard let url = URL(string: url ?? .empty) else {
             throw Errors.invalidURL(name: url ?? .empty)
+        }
+        
+        guard let fileName = fileName else {
+            print(getContents(url: url)?.toString() ?? .empty)
+            return
         }
         
         if environment.currentDirectory.getNode(atPath: fileName) == nil {

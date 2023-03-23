@@ -47,7 +47,7 @@ enum Errors: Error {
         case .invalidFileName(name: let name):
             return "%@: invalid file or directory name: %@".format(commandName, name)
         case .invalidURL(name: let name):
-            return "%@: invalid url: $@".format(commandName, name)
+            return "%@: invalid url: %@".format(commandName, name)
         case .notADirectory(name: let name):
             return "%@: %@ is not a directory".format(commandName, name)
         case .isADirectory(name: let name):
