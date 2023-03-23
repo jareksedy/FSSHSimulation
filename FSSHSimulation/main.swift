@@ -7,6 +7,16 @@
 
 let environment = Environment.shared
 
+func processInput(commandName: String, arguments: [String]) throws {
+    guard let command = commandName.toClass()?.init() else {
+        throw Errors.commandNotFound
+    }
+    
+    do { try command.main(arguments: arguments) }
+    catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
+    catch let error { print(error.localizedDescription) }
+}
+
 while environment.isRunning {
     print(environment.prompt, terminator: " ")
     
@@ -17,12 +27,3 @@ while environment.isRunning {
     }
 }
 
-func processInput(commandName: String, arguments: [String]) throws {
-    guard let command = commandName.toClass()?.init() else {
-        throw Errors.commandNotFound
-    }
-    
-    do { try command.main(arguments: arguments) }
-    catch let error as Errors { print(error.localizedDescription(commandName: commandName)) }
-    catch let error { print(error.localizedDescription) }
-}
