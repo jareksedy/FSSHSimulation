@@ -18,7 +18,7 @@ func processInput(commandName: String, arguments: [String]) throws {
 }
 
 while environment.isRunning {
-    print(environment.prompt, terminator: " ")
+    print(environment.prompt, terminator: .whitespace)
     
     if let input = readLine()?.strip(), let commandName = input.toCommandName(), !commandName.isEmpty {
         do { try processInput(commandName: commandName, arguments: input.toArguments()) }
