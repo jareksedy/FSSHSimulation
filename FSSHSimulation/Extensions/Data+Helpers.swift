@@ -10,7 +10,7 @@ import Foundation
 extension Data {
     static var motd: Data {
         """
-        FSSHSIMULATION V.0.
+        FSSHSIMULATION V.0
         FILE SYSTEM AND SHELL SIMULATION IN SWIFT. MIT LICENSE.
         BY YAROSLAV SEDYSHEV <JAREKSEDY@ICLOUD.COM>
         GITHUB.COM/JAREKSEDY
