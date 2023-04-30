@@ -25,7 +25,7 @@ extension Data {
     
     static var availableCommands: Data {
         """
-        FSSHSIMULATION V.0. AVAILABLE COMMANDS:
+        FSSHSIMULATION V.0 AVAILABLE COMMANDS:
         
         cat file_name ...           - concatenate and print contents of a file(s) to standard output.
         cd directory_name           - change working directory to directory_name.
