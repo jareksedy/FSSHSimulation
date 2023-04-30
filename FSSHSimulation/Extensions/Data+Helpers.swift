@@ -10,7 +10,6 @@ import Foundation
 extension Data {
     static var motd: Data {
         """
-        
         FSSHSIMULATION V.0.
         FILE SYSTEM AND SHELL SIMULATION IN SWIFT. MIT LICENSE.
         BY YAROSLAV SEDYSHEV <JAREKSEDY@ICLOUD.COM>
@@ -26,7 +25,6 @@ extension Data {
     
     static var availableCommands: Data {
         """
-        
         FSSHSIMULATION V.0. AVAILABLE COMMANDS:
         
         cat file_name ...           - concatenate and print contents of a file(s) to standard output.
