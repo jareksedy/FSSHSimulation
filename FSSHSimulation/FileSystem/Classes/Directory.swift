@@ -9,7 +9,7 @@ final class Directory: DirectoryProtocol {
     weak var parent: DirectoryProtocol?
     var name: String
     
-    internal var nodes: [Node] = []
+    var nodes: [Node] = []
     
     init(name: String) {
         self.name = name

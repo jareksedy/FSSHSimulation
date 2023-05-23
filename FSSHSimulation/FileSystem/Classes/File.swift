@@ -11,7 +11,7 @@ final class File: FileProtocol {
     weak var parent: DirectoryProtocol?
     var name: String
     
-    internal var contents: Data?
+    var contents: Data?
     
     init(name: String) {
         self.name = name
